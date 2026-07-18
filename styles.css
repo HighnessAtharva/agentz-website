@@ -54,7 +54,7 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.05;font-weight:600}
 
 /* buttons */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);
-  font-weight:600;font-size:15px;padding:12px 22px;border-radius:12px;border:1.5px solid transparent;
+  font-weight:600;font-size:15px;padding:13px 26px;border-radius:999px;border:1.5px solid transparent;
   cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease}
 .btn-lg{padding:15px 28px;font-size:16px}
 .btn-primary{background:var(--navy);color:#fff}
@@ -286,4 +286,93 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.05;font-weight:600}
   .step-screen{position:relative;opacity:1;transform:none;margin-top:16px}
   .step-screen:not(:first-of-type){display:none}
   html{scroll-behavior:auto}
+}
+
+/* ══════════════════════════════════════════════
+   ADDED SECTIONS — AccuKnox lockup, CTA banner,
+   video carousel, integrations grid, FAQ
+   ══════════════════════════════════════════════ */
+
+/* AccuKnox attribution (hero) */
+.brandby{display:inline-flex;align-items:center;gap:9px;margin-bottom:26px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute)}
+.brandby img{height:24px;width:auto;display:block}
+.brandby:hover{color:var(--ink)}
+
+/* mid-page CTA banner */
+.cta-banner{padding:clamp(30px,6vh,80px) 0;background:var(--paper)}
+.cta-inner{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;
+  background:linear-gradient(120deg,#e9edff 0%,#f6f7fc 62%);border:1px solid var(--line);
+  border-radius:28px;padding:clamp(32px,4vw,60px)}
+.cta-copy h2{font-size:clamp(28px,3.8vw,48px);letter-spacing:-.03em;line-height:1.03;color:var(--ink);max-width:15ch}
+.cta-copy p{margin:16px 0 28px;font-size:17px;color:var(--ink-soft);max-width:42ch}
+.cta-art{min-height:300px}
+
+/* video carousel */
+.vid-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:38px}
+.vid-sub{margin-top:12px;color:var(--ink-soft);font-size:16px;max-width:52ch}
+.vid-nav{display:flex;gap:10px;flex:none}
+.vid-arrow{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--white);
+  display:grid;place-items:center;cursor:pointer;color:var(--ink);transition:.2s}
+.vid-arrow:hover{border-color:var(--blue);color:var(--blue)}
+.vid-arrow:disabled{opacity:.35;cursor:not-allowed}
+.vid-arrow[data-dir="-1"] .ico{transform:rotate(180deg)}
+.vid-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 44px)/3);gap:22px;
+  overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding-bottom:6px;scrollbar-width:none}
+.vid-track::-webkit-scrollbar{display:none}
+.vid-track .video-card{scroll-snap-align:start}
+
+/* integrations grid */
+.integ{padding:clamp(84px,12vh,150px) 0;background:var(--paper-2)}
+.integ-h{margin:0 auto}
+.integ-sub{max-width:54ch;margin:16px auto 0;color:var(--ink-soft);font-size:17px}
+.integ-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:48px}
+.integ-tile{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--white);
+  border:1px solid var(--line);border-radius:14px;padding:18px 16px;font-weight:600;font-size:14.5px;color:var(--ink);transition:.2s}
+.integ-tile .ico{width:19px;height:19px;color:var(--blue)}
+.integ-tile:hover{border-color:var(--blue);transform:translateY(-2px)}
+.integ-partners{margin-top:44px;text-align:center}
+.partner-label{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-mute)}
+.partner-row{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 28px;margin-top:20px}
+.partner{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:var(--ink-soft);font-size:15px}
+.partner .ico{width:18px;height:18px;color:var(--ink-mute)}
+
+/* FAQ accordion (native details) */
+.faq{padding:clamp(84px,12vh,150px) 0;background:var(--paper)}
+.faq-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:56px;align-items:start}
+.faq-lead{margin-top:18px;color:var(--ink-soft);font-size:17px;max-width:32ch}
+.faq-list{display:flex;flex-direction:column;gap:14px}
+.faq-item{background:var(--white);border:1px solid var(--line);border-radius:16px}
+.faq-item summary{list-style:none;display:flex;align-items:center;gap:18px;padding:22px 24px;cursor:pointer}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-n{font-family:var(--mono);font-size:12px;color:var(--ink-mute)}
+.faq-q{flex:1;font-weight:600;font-size:17px;color:var(--ink)}
+.faq-plus{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex:none;transition:.25s}
+.faq-plus .ico{width:18px;height:18px;color:var(--ink);transition:transform .25s ease}
+.faq-item[open] .faq-plus{background:var(--blue);border-color:var(--blue)}
+.faq-item[open] .faq-plus .ico{color:#fff;transform:rotate(45deg)}
+.faq-a{padding:0 24px 24px 62px;color:var(--ink-soft);font-size:15.5px;line-height:1.55;max-width:62ch}
+.faq-help{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  margin-top:44px;padding:28px 32px;background:var(--white);border:1px solid var(--line);border-radius:18px}
+.faq-help b{font-size:18px;color:var(--ink)}
+.faq-help p{color:var(--ink-soft);font-size:15px;margin-top:5px}
+
+/* footer AccuKnox attribution */
+.foot-top{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.foot-by{display:inline-flex;align-items:center;gap:11px;color:rgba(255,255,255,.55);
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase}
+.foot-by img{height:22px;width:auto;filter:brightness(0) invert(1);opacity:.92}
+.foot-by:hover{color:#fff}
+
+@media(max-width:1000px){
+  .cta-inner{grid-template-columns:1fr;gap:32px}
+  .faq-grid{grid-template-columns:1fr;gap:32px}
+  .integ-grid{grid-template-columns:repeat(3,1fr)}
+  .vid-track{grid-auto-columns:calc((100% - 22px)/2)}
+}
+@media(max-width:640px){
+  .integ-grid{grid-template-columns:repeat(2,1fr)}
+  .vid-track{grid-auto-columns:86%}
+  .vid-head{flex-direction:column;align-items:flex-start}
+  .faq-a{padding-left:24px}
 }

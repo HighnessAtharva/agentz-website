@@ -86,3 +86,25 @@ window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);
 stepperProgress();
 progress();
+
+/* ── video carousel (prev / next) ── */
+const track = document.getElementById('vid-track');
+if (track) {
+  const arrows = [...document.querySelectorAll('.vid-arrow')];
+  const stepBy = () => {
+    const card = track.querySelector('.video-card');
+    return card ? card.getBoundingClientRect().width + 22 : 320;
+  };
+  arrows.forEach((a) => a.addEventListener('click', () => {
+    track.scrollBy({ left: (+a.dataset.dir) * stepBy(), behavior: reduce ? 'auto' : 'smooth' });
+  }));
+  const updateArrows = () => {
+    const max = track.scrollWidth - track.clientWidth - 2;
+    arrows.forEach((a) => {
+      a.disabled = (+a.dataset.dir < 0) ? track.scrollLeft <= 2 : track.scrollLeft >= max;
+    });
+  };
+  track.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+}

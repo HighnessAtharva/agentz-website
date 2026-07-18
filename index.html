@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=33" />
+<link rel="stylesheet" href="styles.css?v=34" />
 </head>
 <body>
 
@@ -37,6 +37,8 @@
     <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.6"/><rect x="3" y="13" width="18" height="7" rx="1.6"/><path d="M7 7.5h.5M7 16.5h.5"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5l11 6.5-11 6.5v-13Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M4 18l5-5 4 4 3-3 4 4"/></symbol>
     <symbol id="i-model" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M12 8l4 2.2v3.6L12 16l-4-2.2v-3.6L12 8Z"/></symbol>
     <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13h5l-1 8 8-10h-5l1-8Z"/></symbol>
@@ -52,13 +54,15 @@
 <!-- ══════════════════ HERO ══════════════════ -->
 <section class="hero" data-sec="01">
   <div class="wrap hero-inner">
-    <p class="hero-eyebrow">By AccuKnox · Zero Trust for Agentic AI</p>
+    <a class="brandby" href="https://accuknox.com" target="_blank" rel="noopener">
+      <span>Built by</span><img src="assets/img/accuknox-logo.png" alt="AccuKnox" width="118" height="28">
+    </a>
     <h1 class="hero-brand">AgentZ</h1>
     <p class="hero-title">Zero Trust Agentic AI<br><span class="ital">Security Platform</span></p>
     <p class="hero-sub">Build, run and govern real agents. Secure by default, so the power of agentic AI never costs you control.</p>
     <div class="hero-actions">
       <a class="btn btn-primary btn-lg" href="#waitlist" data-tally-open="RGlZ1l" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the waitlist</a>
-      <a class="btn btn-line btn-lg" href="#platform">See the platform</a>
+      <a class="btn btn-line btn-lg" href="https://accuknox.com/demo" target="_blank" rel="noopener">See the platform</a>
     </div>
     <div class="hero-pills">
       <span class="pill"><svg class="ico"><use href="#i-skills"/></svg><span class="hl hl-a">Skills</span></span>
@@ -205,36 +209,51 @@
   </div>
 </section>
 
-<!-- ══════════════════ DEMO VIDEOS ══════════════════ -->
-<section class="videos" id="demos" data-sec="07">
+<!-- ══════════════════ MID-PAGE CTA BANNER ══════════════════ -->
+<section class="cta-banner" data-sec="07">
   <div class="wrap">
-    <p class="section-eyebrow">See it run · demo videos</p>
-    <h2 class="section-h2">Watch AgentZ work.</h2>
-    <div class="video-grid">
-      <a class="video-card" href="#waitlist">
-        <div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div>
-        <b>Build a skill in chat</b><p>From one sentence to a wired, testable skill.</p>
-      </a>
-      <a class="video-card" href="#waitlist">
-        <div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div>
-        <b>Schedule an agent</b><p>Set a cron, edit from chat, no redeploy.</p>
-      </a>
-      <a class="video-card" href="#waitlist">
-        <div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div>
-        <b>Read a signed trace</b><p>Inspect every span, down to the token.</p>
-      </a>
+    <div class="cta-inner">
+      <div class="cta-copy">
+        <h2>Put your first agent in production.</h2>
+        <p>Start with one skill. Bring your own model. Keep security underneath, from the very first run.</p>
+        <a class="btn btn-primary btn-lg" href="#waitlist" data-tally-open="RGlZ1l" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the waitlist</a>
+      </div>
+      <div class="cta-art ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Illustration · 1200 × 900</span></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════ RUNTIME INTELLIGENCE (screenshot slot) ══════════════════ -->
-<section class="runtime" id="f-edge" data-sec="08">
+<!-- ══════════════════ SEE IT IN ACTION (video carousel) ══════════════════ -->
+<section class="videos" id="demos" data-sec="08">
+  <div class="wrap">
+    <div class="vid-head">
+      <div>
+        <p class="section-eyebrow">See it in action</p>
+        <h2 class="section-h2">Watch AgentZ work.</h2>
+        <p class="vid-sub">Short walkthroughs of AgentZ running in real teams' workflows.</p>
+      </div>
+      <div class="vid-nav">
+        <button class="vid-arrow" data-dir="-1" aria-label="Previous"><svg class="ico"><use href="#i-chev"/></svg></button>
+        <button class="vid-arrow" data-dir="1" aria-label="Next"><svg class="ico"><use href="#i-chev"/></svg></button>
+      </div>
+    </div>
+    <div class="vid-track" id="vid-track">
+      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Build a skill in chat</b><p>From one sentence to a wired, testable skill.</p></a>
+      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Schedule an agent</b><p>Set a cron, edit from chat, no redeploy.</p></a>
+      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Read a signed trace</b><p>Inspect every span, down to the token.</p></a>
+      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Guard a response</b><p>Run over real tools with policy at the edge.</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ RUNTIME INTELLIGENCE ══════════════════ -->
+<section class="runtime" id="f-edge" data-sec="09">
   <div class="wrap runtime-grid">
     <div class="runtime-copy">
       <p class="section-eyebrow">Runtime intelligence</p>
       <h2>Understand <span class="ital">everything</span> your agent does.</h2>
       <p>Runtime telemetry logs every egress by domain, port and protocol. Each connection is allowed or blocked at the kernel and recorded, so nothing leaves without a record.</p>
-      <a class="link-arrow" href="#waitlist">Get early access <svg class="ico ico-sm"><use href="#i-arrow"/></svg></a>
+      <a class="link-arrow" href="https://accuknox.com/demo" target="_blank" rel="noopener">See the platform <svg class="ico ico-sm"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="runtime-media">
       <div class="ph ph-wide"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Runtime telemetry screenshot · 1600 × 1000</span></div>
@@ -242,21 +261,72 @@
   </div>
 </section>
 
-<!-- ══════════════════ INTEGRATIONS ══════════════════ -->
-<section class="integrations" data-sec="09">
+<!-- ══════════════════ INTEGRATIONS GRID ══════════════════ -->
+<section class="integ" id="integrations" data-sec="10">
   <div class="wrap center">
-    <p class="section-eyebrow">Compatible</p>
-    <h2 class="int-h">AgentZ works with your <span class="ital">full</span> stack.</h2>
-    <figure class="int-logos">
-      <img src="assets/img/logos.svg" alt="Compatible with OpenAI, Anthropic, Gemini, KubeArmor, OpenBao, OpenTelemetry, Sigstore, Kubernetes, Slack, Jira, Notion, GitHub and MCP">
-    </figure>
+    <p class="section-eyebrow">Integrations</p>
+    <h2 class="section-h2 integ-h">Works with the stack you already run.</h2>
+    <p class="integ-sub">Connect tools, data and models. Bring your own agent framework. AgentZ governs them all through one policy edge.</p>
+  </div>
+  <div class="wrap">
+    <div class="integ-grid">
+      <span class="integ-tile"><svg class="ico"><use href="#i-workflows"/></svg>Slack</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-files"/></svg>Notion</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-audit"/></svg>GitHub</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-receipt"/></svg>Jira</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-server"/></svg>Kubernetes</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-guardrails"/></svg>KubeArmor</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-key"/></svg>OpenBao</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-audit"/></svg>Sigstore</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-eye"/></svg>OpenTelemetry</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-mcp"/></svg>MCP</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-database"/></svg>Databases</span>
+      <span class="integ-tile"><svg class="ico"><use href="#i-api"/></svg>SaaS APIs</span>
+    </div>
+    <div class="integ-partners">
+      <span class="partner-label">And your agent framework</span>
+      <div class="partner-row">
+        <span class="partner"><svg class="ico"><use href="#i-model"/></svg>OpenAI</span>
+        <span class="partner"><svg class="ico"><use href="#i-model"/></svg>Anthropic</span>
+        <span class="partner"><svg class="ico"><use href="#i-model"/></svg>Gemini</span>
+        <span class="partner"><svg class="ico"><use href="#i-workflows"/></svg>LangChain</span>
+        <span class="partner"><svg class="ico"><use href="#i-teams"/></svg>CrewAI</span>
+        <span class="partner"><svg class="ico"><use href="#i-model"/></svg>Llama</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ══════════════════ TEMPLATE SECTIONS (empty, ready to fill) ══════════════════ -->
-<section class="tpl" data-sec="10">
+<!-- ══════════════════ COMMON QUESTIONS (FAQ) ══════════════════ -->
+<section class="faq" id="faq" data-sec="11">
+  <div class="wrap faq-grid">
+    <div class="faq-intro">
+      <p class="section-eyebrow">FAQ</p>
+      <h2 class="section-h2">Common questions.</h2>
+      <p class="faq-lead">How AgentZ drops into the way your team already ships agents. Here are the answers.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open><summary><span class="faq-n">01</span><span class="faq-q">What is AgentZ?</span><span class="faq-plus"><svg class="ico"><use href="#i-plus"/></svg></span></summary><div class="faq-a">A Zero Trust platform to build, run and govern agents. Skills, workflows, context and guardrails in one control plane, secure by default.</div></details>
+      <details class="faq-item"><summary><span class="faq-n">02</span><span class="faq-q">How is this different from an agent framework?</span><span class="faq-plus"><svg class="ico"><use href="#i-plus"/></svg></span></summary><div class="faq-a">Frameworks help you write an agent. AgentZ runs it in production with policy at the edge, scoped access, and a signed trace for every step.</div></details>
+      <details class="faq-item"><summary><span class="faq-n">03</span><span class="faq-q">How hard is it to get started?</span><span class="faq-plus"><svg class="ico"><use href="#i-plus"/></svg></span></summary><div class="faq-a">Describe the job in a sentence. AgentZ writes the skill and wires the steps. Bring any model or framework, no migration.</div></details>
+      <details class="faq-item"><summary><span class="faq-n">04</span><span class="faq-q">Can non-platform teams use it?</span><span class="faq-plus"><svg class="ico"><use href="#i-plus"/></svg></span></summary><div class="faq-a">Yes. Roles, teams and shared context let security, ops and back office put agents to work, not just the platform team.</div></details>
+    </div>
+  </div>
   <div class="wrap">
-    <p class="section-eyebrow tpl-eyebrow">Section 10 · template</p>
+    <div class="faq-help">
+      <div>
+        <b>Still need help?</b>
+        <p>We're happy to walk your team through it and look at your stack.</p>
+      </div>
+      <a class="btn btn-line" href="https://accuknox.com/demo" target="_blank" rel="noopener">See the platform</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ TEMPLATE SECTIONS (ready to fill) ══════════════════ -->
+<section class="tpl" data-sec="12">
+  <div class="wrap">
+    <p class="section-eyebrow tpl-eyebrow">Section 12 · template</p>
     <div class="tpl-grid">
       <div class="tpl-copy">
         <h2 class="tpl-h">Your headline goes here.</h2>
@@ -268,9 +338,9 @@
   </div>
 </section>
 
-<section class="tpl alt-bg" data-sec="11">
+<section class="tpl alt-bg" data-sec="13">
   <div class="wrap">
-    <p class="section-eyebrow tpl-eyebrow">Section 11 · template</p>
+    <p class="section-eyebrow tpl-eyebrow">Section 13 · template</p>
     <h2 class="tpl-h center">A centered headline for a wide idea.</h2>
     <p class="tpl-lead center">Placeholder lead. Swap in the copy that belongs here.</p>
     <div class="tpl-trio">
@@ -281,30 +351,16 @@
   </div>
 </section>
 
-<section class="tpl" data-sec="12">
-  <div class="wrap">
-    <p class="section-eyebrow tpl-eyebrow">Section 12 · template</p>
-    <div class="tpl-grid rev">
-      <div class="ph ph-tall"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 1200 × 1400</span></div>
-      <div class="tpl-copy">
-        <h2 class="tpl-h">Another block to fill in.</h2>
-        <p class="tpl-lead">Placeholder copy. This template pairs a media slot with a short block of text.</p>
-        <a class="link-arrow muted" href="#">Call to action <svg class="ico ico-sm"><use href="#i-arrow"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════ WAITLIST ══════════════════ -->
-<section class="demo" id="waitlist" data-sec="13">
+<section class="demo" id="waitlist" data-sec="14">
   <div class="wrap demo-grid">
     <div class="demo-copy">
       <h2>Join the <span class="ital">waitlist.</span></h2>
-      <p>AgentZ is in preview. Leave your details and we'll get you in as we open access, build, run and govern, end to end.</p>
+      <p>AgentZ is in preview. Tell us about your team and we'll get you in as we open access, build, run and govern, end to end.</p>
       <ul class="demo-points">
         <li><svg class="ico ico-sm"><use href="#i-guardrails"/></svg> Early access as spots open</li>
         <li><svg class="ico ico-sm"><use href="#i-audit"/></svg> First look at the policy edge and signed traces</li>
-        <li><svg class="ico ico-sm"><use href="#i-skills"/></svg> No credit card, one email when you're in</li>
+        <li><svg class="ico ico-sm"><use href="#i-skills"/></svg> Bring your own model and framework, no migration</li>
       </ul>
     </div>
     <div class="wl-embed">
@@ -319,6 +375,9 @@
 <footer class="footer">
   <div class="wrap foot-top">
     <p class="foot-copy">© 2026 AccuKnox. All rights reserved.</p>
+    <a class="foot-by" href="https://accuknox.com" target="_blank" rel="noopener">
+      <span>A product from</span><img src="assets/img/accuknox-logo.png" alt="AccuKnox">
+    </a>
   </div>
   <div class="foot-wordmark-wrap">
     <div class="foot-wordmark">AgentZ</div>
@@ -328,6 +387,6 @@
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=33"></script>
+<script src="script.js?v=34"></script>
 </body>
 </html>
