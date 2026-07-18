@@ -4,12 +4,12 @@
    ══════════════════════════════════════════════ */
 
 :root{
-  --ink:#151515;
-  --ink-soft:#4a4a48;
-  --ink-mute:#86867f;
-  --line:#e7e5df;
-  --paper:#fbfaf7;
-  --paper-2:#f4f2ec;
+  --ink:#0c1410;         /* near-black, green-tinted */
+  --ink-soft:#3a423d;
+  --ink-mute:#6a716b;
+  --line:#e4e3dc;
+  --paper:#f6f6f1;
+  --paper-2:#eeeee7;
   --white:#ffffff;
 
   --mint:#e6f2ec;
@@ -17,9 +17,10 @@
   --peach:#faeee6;
   --sky:#e6eef6;
 
-  --accent:#1a5c46;      /* deep green — agentz trust */
-  --accent-soft:#d7ede2;
-  --dark:#161613;
+  --accent:#0f5236;      /* deeper green — agentz trust */
+  --accent-bright:#1f9d63;
+  --accent-soft:#d3ebdf;
+  --dark:#0c1410;
 
   --radius:22px;
   --radius-lg:28px;
@@ -1003,3 +1004,111 @@ img.bt-ico{width:30px;height:30px;display:block;margin-bottom:auto}
 
 /* word-sky subtitles: peach lower sky washed out white text — deepen shadow */
 .sky-slide p{text-shadow:0 2px 20px rgba(50,25,60,.5),0 1px 3px rgba(50,25,60,.4) !important}
+
+/* ══════════════════════════════════════════════
+   REVISION 22 — REDESIGN
+   Kill slop: no fake browser/mac windows, no floating glass chips,
+   no glassmorphism-by-default, no pastel wash. Commit to high contrast:
+   off-white base, near-black green-tinted ink, deep-green accent, one
+   bold dark zone, and a giant AgentZ wordmark footer.
+   ══════════════════════════════════════════════ */
+
+/* shared section labels */
+.section-kicker{display:block;font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--accent);margin:0 0 14px}
+.section-h{font-size:clamp(30px,4.4vw,54px);letter-spacing:-.025em;line-height:1.02;max-width:16ch}
+
+/* outline button */
+.btn-line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-line:hover{background:var(--ink);color:var(--paper);transform:translateY(-1px)}
+
+/* ── HERO — typographic, no product mockup ── */
+.hero{padding:clamp(72px,12vh,140px) 24px clamp(64px,10vh,120px);text-align:center}
+.hero-inner{max-width:940px}
+.hero-kicker{font-family:var(--mono);font-size:13px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:22px}
+.hero-title{font-size:clamp(46px,8vw,104px);line-height:.96;letter-spacing:-.04em;color:var(--ink)}
+.hero-title .ital{color:var(--accent)}
+.hero-sub{font-size:clamp(18px,2.3vw,25px);color:var(--ink-soft);max-width:620px;margin:26px auto 0;line-height:1.35}
+.hero-actions{margin:36px 0 18px}
+.hero-trust{font-size:13.5px;color:var(--ink-mute)}
+
+/* ── DARK PLATFORM ZONE ── */
+.skyzone{background:linear-gradient(180deg,#0f3d2b 0%,#0c2a1f 42%,#091510 100%) !important}
+.featsky{background:transparent !important;padding:clamp(88px,12vh,148px) 0 clamp(96px,13vh,160px) !important}
+.featsky .wrap{position:relative;z-index:2}
+.featsky .section-kicker{color:var(--accent-bright)}
+.featsky .section-h{color:#fff;margin-bottom:44px}
+
+.glassbento{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.featsky .gcard{
+  grid-column:span 2;border-radius:18px;padding:28px;
+  background:rgba(255,255,255,.045) !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  backdrop-filter:none !important;box-shadow:none !important;
+  color:#fff;transition:border-color .2s,background .2s,transform .2s;
+}
+.featsky .gcard:hover{background:rgba(255,255,255,.08) !important;
+  border-color:rgba(255,255,255,.26) !important;transform:translateY(-3px)}
+.featsky .gcard h3{color:#fff;font-size:20px;letter-spacing:-.01em;text-shadow:none}
+.featsky .gcard p{color:rgba(255,255,255,.74);font-size:14.5px;margin-top:10px;text-shadow:none;line-height:1.5}
+.featsky .gcard.big{grid-column:span 3;padding:34px}
+.featsky .gcard.big h3{font-size:26px}
+.featsky .gcard.big p{font-size:16px;max-width:42ch}
+.featsky .gcard.lead{
+  background:rgba(31,157,99,.14) !important;border-color:rgba(31,157,99,.42) !important;
+}
+.featsky .gc-ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;font-size:20px;
+  margin-bottom:18px;color:#fff;background:rgba(255,255,255,.08) !important;border:1px solid rgba(255,255,255,.18) !important}
+@media(max-width:860px){.featsky .gcard,.featsky .gcard.big{grid-column:span 1}}
+
+/* ── BUILD / RUN / GOVERN giant words on the dark zone ── */
+.sky-pin{background:linear-gradient(180deg,#0b241a 0%,#091510 100%) !important}
+.sky-slide h2{text-shadow:none !important;color:#fff}
+.sky-slide p{color:rgba(255,255,255,.8) !important;text-shadow:none !important}
+
+/* ── RUNTIME INTELLIGENCE (light, clean panel — no mac window) ── */
+.deep{background:var(--paper);padding:clamp(88px,12vh,140px) 0}
+.deep-copy h2{font-size:clamp(30px,4vw,48px);margin:6px 0 20px;color:var(--ink)}
+.deep-copy p{color:var(--ink-soft)}
+.media-panel{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0f0f13;
+  box-shadow:0 30px 60px -34px rgba(12,20,16,.5)}
+.media-panel img{width:100%;display:block}
+
+/* ── SCALE STAT (no glass card, no giant gradient number) ── */
+.scale-sec{padding:clamp(88px,12vh,140px) 0;background:var(--paper-2)}
+.glass-scale{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.scale-viz{display:flex;justify-content:center}
+.scale-viz img{max-width:420px;width:100%;filter:drop-shadow(0 30px 60px rgba(12,20,16,.18))}
+.scale-copy h2{font-size:clamp(30px,4vw,48px);margin-bottom:24px;max-width:16ch;color:var(--ink)}
+.scale-stat{font-size:19px;color:var(--ink-soft);max-width:44ch;line-height:1.5}
+.scale-num{display:inline-block;font-weight:700;font-size:1.15em;color:var(--accent);letter-spacing:-.02em}
+@media(max-width:860px){.glass-scale{grid-template-columns:1fr;gap:32px}.scale-viz img{max-width:300px}}
+
+/* ── SOLUTIONS accent refresh ── */
+.solutions{padding:clamp(96px,13vh,150px) 0;background:var(--paper)}
+.bento .tile-hero{background:linear-gradient(150deg,#0f5236 0%,#177a4f 55%,#1f9d63 100%) !important}
+.bento-tile{background:var(--white);border:1px solid var(--line)}
+.bento-tile:hover{border-color:var(--accent)}
+.tile-industries{background:var(--white)}
+
+/* ── FLOW DIAGRAM — solid clean card, no glass, no blobs ── */
+.diagram-sec{background:var(--paper-2);padding:clamp(96px,13vh,150px) 0}
+.diagram-card{background:var(--white) !important;backdrop-filter:none !important;
+  border:1px solid var(--line) !important;border-radius:22px;padding:22px;
+  box-shadow:0 30px 70px -40px rgba(12,20,16,.3);max-width:1040px;margin:0 auto}
+.diagram-card img{border-radius:12px;width:100%}
+
+/* ── INTEGRATIONS + DEMO polish ── */
+.integrations{background:var(--paper)}
+.demo-grid{background:var(--dark)}
+
+/* ── FOOTER — giant AgentZ wordmark, no links ── */
+.footer{background:var(--paper);border-top:1px solid var(--line);padding:64px 0 0;overflow:hidden}
+.foot-top{padding-bottom:8px}
+.foot-copy{font-size:13px;color:var(--ink-mute);margin:0}
+.foot-wordmark{font-family:var(--sans);font-weight:700;color:var(--ink);text-align:center;
+  font-size:clamp(110px,29vw,560px);line-height:.72;letter-spacing:-.05em;white-space:nowrap;
+  transform:translateY(20%);user-select:none;pointer-events:none}
+
+/* motion honours reduced-motion for the dark word zone already */
