@@ -14,7 +14,7 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.12 });
-document.querySelectorAll('.arch-frame,.arch-rail,.ncard,.video-card,.runtime-copy,.runtime-media,.tpl-copy,.tpl-trio .ph,.int-logos')
+document.querySelectorAll('.showcase-frame,.arch-frame,.arch-rail,.ncard,.dcard,.dmn,.control-copy,.control-card,.video-card,.runtime-copy,.runtime-media,.tpl-copy')
   .forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -54,21 +54,11 @@ dots.forEach((d) => d.addEventListener('click', () => {
   window.scrollTo({ top: absTop + total * ((i + 0.5) / 3), behavior: reduce ? 'auto' : 'smooth' });
 }));
 
-/* ── top scroll-progress bar + section counter ── */
+/* ── top scroll-progress bar ── */
 const bar = document.getElementById('scrollbar-fill');
-const secNum = document.getElementById('sec-num');
-const secs = [...document.querySelectorAll('[data-sec]')];
-
 function progress() {
-  const doc = document.documentElement;
-  const scrollable = doc.scrollHeight - window.innerHeight;
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   if (bar) bar.style.width = (scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0) + '%';
-  if (secNum) {
-    const mid = window.scrollY + window.innerHeight * 0.4;
-    let cur = secs[0];
-    for (const s of secs) { if (s.offsetTop <= mid) cur = s; }
-    if (cur) secNum.textContent = cur.dataset.sec;
-  }
 }
 
 /* ── one rAF-throttled scroll loop ── */

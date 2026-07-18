@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=34" />
+<link rel="stylesheet" href="styles.css?v=35" />
 </head>
 <body>
 
@@ -47,12 +47,11 @@
 
 <!-- scroll progress -->
 <div class="scrollbar" aria-hidden="true"><span id="scrollbar-fill"></span></div>
-<div class="sec-counter" aria-hidden="true"><span id="sec-num">01</span></div>
 
 <main id="top">
 
 <!-- ══════════════════ HERO ══════════════════ -->
-<section class="hero" data-sec="01">
+<section class="hero">
   <div class="wrap hero-inner">
     <a class="brandby" href="https://accuknox.com" target="_blank" rel="noopener">
       <span>Built by</span><img src="assets/img/accuknox-logo.png" alt="AccuKnox" width="118" height="28">
@@ -73,8 +72,18 @@
   </div>
 </section>
 
+<!-- ══════════════════ SHOWCASE (big product shot) ══════════════════ -->
+<section class="showcase">
+  <div class="wrap">
+    <div class="showcase-frame">
+      <img src="assets/img/screens/showcase.svg" alt="AgentZ posting a weekly report into a team workspace (placeholder screenshot)">
+      <span class="screen-tag">Placeholder · drop your product screenshot here</span>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ PLATFORM ARCHITECTURE ══════════════════ -->
-<section class="arch" id="platform" data-sec="02">
+<section class="arch" id="platform">
   <div class="wrap">
     <p class="section-eyebrow">The platform</p>
     <h2 class="section-h2">One control plane for every agent.</h2>
@@ -112,16 +121,12 @@
   </div>
 </section>
 
-<!-- ══════════════════ THREE PILLARS ══════════════════ -->
-<section class="feature" id="pillars" data-sec="03">
+<!-- ══════════════════ THREE PILLARS (left header + cards) ══════════════════ -->
+<section class="feature" id="pillars">
   <div class="wrap">
-    <div class="feature-head">
-      <span class="feature-ico"><svg class="ico"><use href="#i-skills"/></svg></span>
-      <div class="feature-head-copy">
-        <h2 class="feature-title">A platform for the agents <span class="hl hl-a">your teams already want to build</span>.</h2>
-        <p class="feature-lead">Compose <span class="hl hl-a">skills</span>, wire them into <span class="hl hl-b">workflows</span>, and roll them out across your <span class="hl hl-c">organization</span>. Bring any model or framework. Security stays underneath, so you focus on what the agents actually do.</p>
-      </div>
-      <span class="feature-tag">Three pillars · one control plane</span>
+    <div class="fhead">
+      <h2 class="fhead-h">A platform for the agents <span class="hl hl-a">your teams already want to build</span>.</h2>
+      <p class="fhead-p">Compose <span class="hl hl-a">skills</span>, wire them into <span class="hl hl-b">workflows</span>, and roll them out across your <span class="hl hl-c">organization</span>. Bring any model or framework. Security stays underneath, so you focus on what the agents actually do.</p>
     </div>
     <div class="ncards ncards-3">
       <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-skills"/></svg></span><span class="ncard-n">01</span></div><h3><span class="hl hl-a">Skill management</span></h3><p>Package capabilities as reusable skills. Versioned, testable, and shared across every agent your team runs.</p></article>
@@ -132,11 +137,10 @@
 </section>
 
 <!-- ══════════════════ BUILD · RUN · GOVERN (scroll stepper) ══════════════════ -->
-<section class="stepper" id="brg" data-sec="04">
+<section class="stepper" id="brg">
   <div class="stepper-sticky">
     <div class="wrap stepper-grid">
       <div class="stepper-left">
-        <span class="stepper-eyebrow">Build · Run · Govern</span>
         <div class="step-words">
           <div class="step-word is-on" data-step="0">
             <h2>Build</h2>
@@ -167,50 +171,68 @@
   </div>
 </section>
 
-<!-- ══════════════════ SECURE BY DEFAULT (four defaults) ══════════════════ -->
-<section class="feature alt" id="secure" data-sec="05">
+<!-- ══════════════════ SECURE BY DEFAULT (centered header + ghost-number cards) ══════════════════ -->
+<section class="feature alt" id="secure">
   <div class="wrap">
-    <div class="feature-head">
-      <span class="feature-ico"><svg class="ico"><use href="#i-shield"/></svg></span>
-      <div class="feature-head-copy">
-        <h2 class="feature-title">Secure by default, so you never have to <span class="hl hl-a">bolt it on later</span>.</h2>
-        <p class="feature-lead">You focus on <span class="hl hl-a">skills</span> and <span class="hl hl-b">workflows</span>. AgentZ quietly handles the four things that usually turn an agent demo into a production incident.</p>
-      </div>
-      <span class="feature-tag">Four defaults · zero configuration</span>
+    <div class="fhead center">
+      <h2 class="fhead-h">Secure by default, so you never have to <span class="hl hl-a">bolt it on later</span>.</h2>
+      <p class="fhead-p">You focus on <span class="hl hl-a">skills</span> and <span class="hl hl-b">workflows</span>. AgentZ quietly handles the four things that usually turn an agent demo into a production incident.</p>
     </div>
-    <div class="ncards ncards-4">
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-key"/></svg></span><span class="ncard-n">01</span></div><h3>Credentials, handled</h3><p>Secrets stay in the vault. Agents get scoped access at the moment they need it, and never see the key.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-shield"/></svg></span><span class="ncard-n">02</span></div><h3>Just-enough access</h3><p>Every skill runs with the narrowest permissions that get the job done. No standing cloud roles.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-eye"/></svg></span><span class="ncard-n">03</span></div><h3>Runtime you can see</h3><p>Every action, tool call, and decision is visible in one place, in real time.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-audit"/></svg></span><span class="ncard-n">04</span></div><h3>Audit, out of the box</h3><p>A signed trace for every run. SOC and compliance reviews stop being a project.</p></article>
+    <div class="dcards">
+      <article class="dcard"><span class="dcard-num">01</span><span class="dcard-ico"><svg class="ico"><use href="#i-key"/></svg></span><h3>Credentials, handled</h3><p>Secrets stay in the vault. Agents get scoped access at the moment they need it, and never see the key.</p></article>
+      <article class="dcard"><span class="dcard-num">02</span><span class="dcard-ico"><svg class="ico"><use href="#i-shield"/></svg></span><h3>Just-enough access</h3><p>Every skill runs with the narrowest permissions that get the job done. No standing cloud roles.</p></article>
+      <article class="dcard"><span class="dcard-num">03</span><span class="dcard-ico"><svg class="ico"><use href="#i-eye"/></svg></span><h3>Runtime you can see</h3><p>Every action, tool call, and decision is visible in one place, in real time.</p></article>
+      <article class="dcard"><span class="dcard-num">04</span><span class="dcard-ico"><svg class="ico"><use href="#i-audit"/></svg></span><h3>Audit, out of the box</h3><p>A signed trace for every run. SOC and compliance reviews stop being a project.</p></article>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════ SIX DOMAINS ══════════════════ -->
-<section class="feature" id="domains" data-sec="06">
+<!-- ══════════════════ SIX DOMAINS (split header + hairline grid) ══════════════════ -->
+<section class="feature" id="domains">
   <div class="wrap">
-    <div class="feature-head">
-      <span class="feature-ico"><svg class="ico"><use href="#i-bolt"/></svg></span>
-      <div class="feature-head-copy">
-        <h2 class="feature-title">Real work, left to run <span class="hl hl-b">on its own</span>.</h2>
-        <p class="feature-lead">The first agents in production are not doing science fiction. They are doing the spreadsheet, the ticket, the on-call page, the quarterly report. Boring, valuable, repeatable.</p>
-      </div>
-      <span class="feature-tag">Six domains · production ready</span>
+    <div class="fhead split">
+      <h2 class="fhead-h">Real work, left to run <span class="hl hl-b">on its own</span>.</h2>
+      <p class="fhead-p">The first agents in production are not doing science fiction. They are doing the spreadsheet, the ticket, the on-call page, the quarterly report. Boring, valuable, repeatable.</p>
     </div>
-    <div class="ncards ncards-3">
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-server"/></svg></span><span class="ncard-n">01</span></div><h3>IT and DevOps</h3><p>Triage alerts, run remediations, and automate routine ops on a schedule.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-secops"/></svg></span><span class="ncard-n">02</span></div><h3>Security operations</h3><p>Enrich incidents and run guarded response workflows over real tools.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-chart"/></svg></span><span class="ncard-n">03</span></div><h3>Data and reporting</h3><p>Pull, summarize, and distribute recurring reports across systems.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-headset"/></svg></span><span class="ncard-n">04</span></div><h3>Customer ops</h3><p>Resolve tickets and update records with auditable, scoped access.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-receipt"/></svg></span><span class="ncard-n">05</span></div><h3>Back office</h3><p>Automate finance, HR, and procurement tasks under tight controls.</p></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><span class="ncard-n">06</span></div><h3>Custom workflows</h3><p>Compose your own agents from marketplace building blocks.</p></article>
+    <div class="dmn-grid">
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-server"/></svg></span><h3>IT and DevOps</h3></div><p>Triage alerts, run remediations, and automate routine ops on a schedule.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-secops"/></svg></span><h3>Security operations</h3></div><p>Enrich incidents and run guarded response workflows over real tools.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-chart"/></svg></span><h3>Data and reporting</h3></div><p>Pull, summarize, and distribute recurring reports across systems.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-headset"/></svg></span><h3>Customer ops</h3></div><p>Resolve tickets and update records with auditable, scoped access.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-receipt"/></svg></span><h3>Back office</h3></div><p>Automate finance, HR, and procurement tasks under tight controls.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><h3>Custom workflows</h3></div><p>Compose your own agents from marketplace building blocks.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ CONTROL (split copy + gradient card) ══════════════════ -->
+<section class="control" id="control">
+  <div class="wrap control-grid">
+    <div class="control-copy">
+      <span class="control-tag">You stay in control</span>
+      <h2>Autonomous, not <span class="ital">unsupervised</span>.</h2>
+      <p>AgentZ asks before anything it cannot undo, and it pushes back when you are about to make a mistake. It proposes, you decide. Every sensitive action waits on your approval.</p>
+      <ul class="control-list">
+        <li><svg class="ico ico-sm"><use href="#i-eye"/></svg> Reads a source only when it is scoped in.</li>
+        <li><svg class="ico ico-sm"><use href="#i-guardrails"/></svg> Approval required on anything irreversible.</li>
+        <li><svg class="ico ico-sm"><use href="#i-teams"/></svg> Per-person permissions and access controls.</li>
+      </ul>
+      <a class="btn btn-primary" href="https://accuknox.com/demo" target="_blank" rel="noopener">See the platform</a>
+    </div>
+    <div class="control-card">
+      <div class="cc-msg"><span class="cc-av">SB</span><div><b>Sam Bauer</b><p><span class="cc-mention">@AgentZ</span> delete the staging env and the old repo to cut cost.</p></div></div>
+      <div class="cc-msg"><span class="cc-av cc-av-z">Z</span><div><b>AgentZ <span class="cc-app">APP</span></b><p>Killing staging now. The repo has 3 open PRs and a commit from today, so I would hold. Archive it instead?</p>
+        <div class="cc-chip">acme-platform · last commit 2h ago · 3 open PRs</div>
+        <div class="cc-actions"><span class="cc-btn cc-btn-primary">Archive instead</span><span class="cc-btn">Delete anyway</span></div>
+      </div></div>
+      <div class="cc-msg"><span class="cc-av">SB</span><div><b>Sam Bauer</b><p>good catch. archive it.</p></div></div>
+      <div class="cc-foot"><svg class="ico ico-sm"><use href="#i-guardrails"/></svg> Trusted and secured · CCPA · GDPR · SOC 2</div>
     </div>
   </div>
 </section>
 
 <!-- ══════════════════ MID-PAGE CTA BANNER ══════════════════ -->
-<section class="cta-banner" data-sec="07">
+<section class="cta-banner">
   <div class="wrap">
     <div class="cta-inner">
       <div class="cta-copy">
@@ -224,7 +246,7 @@
 </section>
 
 <!-- ══════════════════ SEE IT IN ACTION (video carousel) ══════════════════ -->
-<section class="videos" id="demos" data-sec="08">
+<section class="videos" id="demos">
   <div class="wrap">
     <div class="vid-head">
       <div>
@@ -247,7 +269,7 @@
 </section>
 
 <!-- ══════════════════ RUNTIME INTELLIGENCE ══════════════════ -->
-<section class="runtime" id="f-edge" data-sec="09">
+<section class="runtime" id="f-edge">
   <div class="wrap runtime-grid">
     <div class="runtime-copy">
       <p class="section-eyebrow">Runtime intelligence</p>
@@ -262,7 +284,7 @@
 </section>
 
 <!-- ══════════════════ INTEGRATIONS GRID ══════════════════ -->
-<section class="integ" id="integrations" data-sec="10">
+<section class="integ" id="integrations">
   <div class="wrap center">
     <p class="section-eyebrow">Integrations</p>
     <h2 class="section-h2 integ-h">Works with the stack you already run.</h2>
@@ -298,7 +320,7 @@
 </section>
 
 <!-- ══════════════════ COMMON QUESTIONS (FAQ) ══════════════════ -->
-<section class="faq" id="faq" data-sec="11">
+<section class="faq" id="faq">
   <div class="wrap faq-grid">
     <div class="faq-intro">
       <p class="section-eyebrow">FAQ</p>
@@ -323,10 +345,10 @@
   </div>
 </section>
 
-<!-- ══════════════════ TEMPLATE SECTIONS (ready to fill) ══════════════════ -->
-<section class="tpl" data-sec="12">
+<!-- ══════════════════ TEMPLATE SECTION (ready to fill) ══════════════════ -->
+<section class="tpl">
   <div class="wrap">
-    <p class="section-eyebrow tpl-eyebrow">Section 12 · template</p>
+    <p class="section-eyebrow tpl-eyebrow">Template · your section</p>
     <div class="tpl-grid">
       <div class="tpl-copy">
         <h2 class="tpl-h">Your headline goes here.</h2>
@@ -338,21 +360,8 @@
   </div>
 </section>
 
-<section class="tpl alt-bg" data-sec="13">
-  <div class="wrap">
-    <p class="section-eyebrow tpl-eyebrow">Section 13 · template</p>
-    <h2 class="tpl-h center">A centered headline for a wide idea.</h2>
-    <p class="tpl-lead center">Placeholder lead. Swap in the copy that belongs here.</p>
-    <div class="tpl-trio">
-      <div class="ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image</span></div>
-      <div class="ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image</span></div>
-      <div class="ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image</span></div>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════ WAITLIST ══════════════════ -->
-<section class="demo" id="waitlist" data-sec="14">
+<section class="demo" id="waitlist">
   <div class="wrap demo-grid">
     <div class="demo-copy">
       <h2>Join the <span class="ital">waitlist.</span></h2>
@@ -387,6 +396,6 @@
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=34"></script>
+<script src="script.js?v=35"></script>
 </body>
 </html>
