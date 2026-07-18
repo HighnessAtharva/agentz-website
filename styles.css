@@ -975,3 +975,31 @@ img.bt-ico{width:30px;height:30px;display:block;margin-bottom:auto}
    each word stays locked for a long stretch of scroll before the handoff.
    ══════════════════════════════════════════════ */
 .sky{height:640vh !important}
+
+/* ══════════════════════════════════════════════
+   REVISION 21 — navbar removed + contrast repair
+   feature glass cards had white text on a light-blue sky (unreadable).
+   Give them a dark frosted backing so the copy reads at any sky colour,
+   and add hero breathing room now that the sticky nav is gone.
+   ══════════════════════════════════════════════ */
+
+/* hero sat under a 68px nav; give it its own top space */
+.hero{padding-top:64px}
+
+/* dark frosted glass = white text always readable over the colourful sky */
+.featsky .gcard{
+  background:rgba(22,20,40,.34) !important;
+  border:1px solid rgba(255,255,255,.28) !important;
+  backdrop-filter:blur(7px) saturate(1.15) !important;
+  box-shadow:0 22px 54px -30px rgba(28,14,48,.55) !important;
+}
+.featsky .gcard:hover{background:rgba(22,20,40,.46) !important}
+.featsky .gcard h3{color:#fff !important;text-shadow:0 1px 12px rgba(0,0,0,.4)}
+.featsky .gcard p{color:rgba(255,255,255,.95) !important;text-shadow:0 1px 9px rgba(0,0,0,.34)}
+.featsky .gc-ico{
+  background:rgba(255,255,255,.16) !important;
+  border:1px solid rgba(255,255,255,.42) !important;color:#fff !important;
+}
+
+/* word-sky subtitles: peach lower sky washed out white text — deepen shadow */
+.sky-slide p{text-shadow:0 2px 20px rgba(50,25,60,.5),0 1px 3px rgba(50,25,60,.4) !important}

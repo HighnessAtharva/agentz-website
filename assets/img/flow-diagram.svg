@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 480" font-family="'General Sans',system-ui,sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M1 1l6 3.5L1 8" fill="none" stroke="#1a5c46" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- INTENT column -->
+  <text x="40" y="86" fill="#6a6a64" font-size="12" font-weight="600" letter-spacing="1.5">INTENT IN</text>
+  <g font-size="14" fill="#1f1f1d" font-weight="600">
+    <rect x="40" y="100" width="150" height="42" rx="11" fill="#ffffff" stroke="#dfe0d9"/><text x="64" y="126">chat</text>
+    <rect x="40" y="152" width="150" height="42" rx="11" fill="#ffffff" stroke="#dfe0d9"/><text x="64" y="178">API</text>
+    <rect x="40" y="204" width="150" height="42" rx="11" fill="#ffffff" stroke="#dfe0d9"/><text x="64" y="230">CLI</text>
+    <rect x="40" y="256" width="150" height="42" rx="11" fill="#ffffff" stroke="#dfe0d9"/><text x="64" y="282">schedule</text>
+  </g>
+  <g stroke="#1a5c46" stroke-width="1.6" fill="none" marker-end="url(#arrow)" opacity=".8">
+    <path d="M190 121 C 235 121 235 199 276 199"/>
+    <path d="M190 173 C 235 173 235 199 276 199"/>
+    <path d="M190 225 C 235 225 235 200 276 200"/>
+    <path d="M190 277 C 235 277 235 201 276 201"/>
+  </g>
+
+  <!-- AGENT Z core -->
+  <rect x="284" y="96" width="286" height="212" rx="18" fill="#0f2c22"/>
+  <text x="308" y="130" fill="#ffffff" font-size="20" font-weight="700">Agent Z</text>
+  <text x="308" y="150" fill="#8fd9b6" font-size="12">build . run . govern</text>
+  <g font-size="13" fill="#dff0e8" font-weight="600">
+    <rect x="304" y="164" width="120" height="58" rx="12" fill="#153a2c" stroke="#245c39"/><text x="320" y="190">skills</text><text x="320" y="208" font-size="10.5" fill="#8fd9b6" font-weight="400">authored in chat</text>
+    <rect x="432" y="164" width="120" height="58" rx="12" fill="#153a2c" stroke="#245c39"/><text x="448" y="190">workflows</text><text x="448" y="208" font-size="10.5" fill="#8fd9b6" font-weight="400">wired steps</text>
+    <rect x="304" y="230" width="120" height="58" rx="12" fill="#153a2c" stroke="#245c39"/><text x="320" y="256">context</text><text x="320" y="274" font-size="10.5" fill="#8fd9b6" font-weight="400">memory + graph</text>
+    <rect x="432" y="230" width="120" height="58" rx="12" fill="#153a2c" stroke="#245c39"/><text x="448" y="256">guardrails</text><text x="448" y="274" font-size="10.5" fill="#8fd9b6" font-weight="400">default deny</text>
+  </g>
+  <path d="M570 202 h30" stroke="#1a5c46" stroke-width="1.6" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- POLICY EDGE -->
+  <rect x="604" y="96" width="66" height="212" rx="14" fill="#d7ede2" stroke="#a9d6c0"/>
+  <rect x="624" y="176" width="26" height="22" rx="4" fill="none" stroke="#1a5c46" stroke-width="2"/>
+  <path d="M630 176v-6a7 7 0 0 1 14 0v6" fill="none" stroke="#1a5c46" stroke-width="2"/>
+  <text x="637" y="150" fill="#1a5c46" font-size="12" font-weight="700" letter-spacing="1.5" transform="rotate(90 637 150)">POLICY EDGE</text>
+  <g stroke="#1a5c46" stroke-width="1.6" fill="none" marker-end="url(#arrow)" opacity=".85">
+    <path d="M670 160 C 700 160 700 150 726 150"/>
+    <path d="M670 250 C 700 250 700 258 726 258"/>
+  </g>
+
+  <!-- TARGETS -->
+  <text x="732" y="130" fill="#6a6a64" font-size="12" font-weight="600" letter-spacing="1.2">TOOLS</text>
+  <g font-size="12.5" fill="#1f1f1d" font-weight="600">
+    <rect x="732" y="138" width="228" height="66" rx="12" fill="#ffffff" stroke="#dfe0d9"/>
+    <text x="748" y="162" font-size="11.5">MCP</text><text x="820" y="162" font-size="11.5">databases</text>
+    <text x="748" y="188" font-size="11.5">SaaS APIs</text><text x="820" y="188" font-size="11.5">files</text>
+  </g>
+  <text x="732" y="238" fill="#6a6a64" font-size="12" font-weight="600" letter-spacing="1.2">MODELS</text>
+  <g font-size="12.5" fill="#1f1f1d" font-weight="600">
+    <rect x="732" y="246" width="228" height="66" rx="12" fill="#ffffff" stroke="#dfe0d9"/>
+    <text x="748" y="270" font-size="11.5">OpenAI</text><text x="820" y="270" font-size="11.5">Anthropic</text>
+    <text x="748" y="296" font-size="11.5">Gemini</text><text x="820" y="296" font-size="11.5">open-source</text>
+  </g>
+
+  <!-- OBSERVABILITY BAR -->
+  <rect x="40" y="360" width="920" height="72" rx="16" fill="#161613"/>
+  <text x="64" y="392" fill="#ffffff" font-size="15" font-weight="700">Observability . Audit . Trace</text>
+  <text x="64" y="414" fill="#a6a49a" font-size="12">every call stamped to a signed, tamper-evident trace underneath</text>
+  <g font-size="11" font-weight="600">
+    <rect x="700" y="378" width="110" height="26" rx="13" fill="#153a2c"/><text x="720" y="395" fill="#8fd9b6">OpenTelemetry</text>
+    <rect x="820" y="378" width="118" height="26" rx="13" fill="#153a2c"/><text x="840" y="395" fill="#8fd9b6">Sigstore signed</text>
+  </g>
+  <g stroke="#8b8b85" stroke-width="1.4" fill="none" stroke-dasharray="3 5" opacity=".6">
+    <path d="M115 308 v52"/><path d="M427 308 v52"/><path d="M637 308 v52"/><path d="M846 312 v48"/>
+  </g>
+</svg>

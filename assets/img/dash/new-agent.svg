@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="'JetBrains Mono','SF Mono',ui-monospace,monospace">
+  <rect width="720" height="440" fill="#0f0f13"/>
+  <rect x="0" y="0" width="720" height="46" fill="#141419"/>
+  <line x1="0" y1="46" x2="720" y2="46" stroke="#26262e"/>
+  <circle cx="26" cy="23" r="6" fill="#3ec27f"/>
+  <text x="42" y="28" fill="#e8e8ea" font-size="14" font-weight="500">Create an agent</text>
+  <text x="24" y="86" fill="#8b8b95" font-size="11">NAME</text>
+  <rect x="24" y="96" width="672" height="40" rx="10" fill="#17171d" stroke="#2c2c36"/>
+  <text x="40" y="121" fill="#e8e8ea" font-size="13">competitive-digest</text>
+  <text x="24" y="168" fill="#8b8b95" font-size="11">SANDBOX</text>
+  <rect x="24" y="178" width="220" height="40" rx="10" fill="#1d2a22" stroke="#245c39"/>
+  <text x="40" y="203" fill="#3ec27f" font-size="13">isolated . hardened</text>
+  <rect x="256" y="178" width="200" height="40" rx="10" fill="#17171d" stroke="#2c2c36"/>
+  <text x="272" y="203" fill="#8b8b95" font-size="13">shared</text>
+  <text x="24" y="250" fill="#8b8b95" font-size="11">TOOLS</text>
+  <g font-size="12">
+    <rect x="24" y="260" width="150" height="30" rx="15" fill="#17171d" stroke="#2c2c36"/><text x="44" y="279" fill="#c7c7cf">http_get</text>
+    <rect x="184" y="260" width="150" height="30" rx="15" fill="#17171d" stroke="#2c2c36"/><text x="204" y="279" fill="#c7c7cf">notion</text>
+    <rect x="344" y="260" width="150" height="30" rx="15" fill="#17171d" stroke="#2c2c36"/><text x="364" y="279" fill="#c7c7cf">slack</text>
+    <rect x="504" y="260" width="120" height="30" rx="15" fill="#1c2740" stroke="#2f4d7a"/><text x="524" y="279" fill="#6aa9f0">+ add</text>
+  </g>
+  <text x="24" y="322" fill="#8b8b95" font-size="11">GUARDRAILS</text>
+  <rect x="24" y="332" width="672" height="34" rx="9" fill="#131318" stroke="#26262e"/>
+  <text x="40" y="354" fill="#3ec27f" font-size="12">default deny</text>
+  <text x="180" y="354" fill="#8b8b95" font-size="12">secrets resolved at edge . never held by the agent</text>
+  <rect x="24" y="384" width="150" height="36" rx="10" fill="#3ec27f"/>
+  <text x="52" y="407" fill="#0f0f13" font-size="12.5" font-weight="600">Create + go</text>
+  <text x="200" y="407" fill="#5c6a7a" font-size="11">name it, pick a sandbox, and go</text>
+</svg>

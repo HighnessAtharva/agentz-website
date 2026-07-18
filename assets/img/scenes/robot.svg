@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 460" font-family="'General Sans',system-ui,sans-serif">
+  <defs>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2f9a72"/><stop offset="1" stop-color="#143e2f"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".9"/><stop offset="1" stop-color="#ffffff" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+  <!-- signed boundary ring -->
+  <circle cx="230" cy="230" r="196" fill="none" stroke="#1a5c46" stroke-opacity=".22" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <circle cx="230" cy="230" r="160" fill="none" stroke="#1a5c46" stroke-opacity=".16" stroke-width="1.5"/>
+  <!-- orbiting trace nodes -->
+  <g>
+    <circle cx="230" cy="34" r="7" fill="#3ec27f"/>
+    <circle cx="426" cy="230" r="6" fill="#6aa9f0"/>
+    <circle cx="230" cy="426" r="6" fill="#f5bd4f"/>
+    <circle cx="34" cy="230" r="6" fill="#f0605c"/>
+  </g>
+  <!-- agent core -->
+  <rect x="128" y="150" width="204" height="170" rx="40" fill="url(#core)"/>
+  <rect x="128" y="150" width="204" height="170" rx="40" fill="none" stroke="#57c79a" stroke-opacity=".5"/>
+  <!-- antenna -->
+  <line x1="230" y1="150" x2="230" y2="118" stroke="#1a5c46" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="230" cy="112" r="10" fill="#bfe6d3"/>
+  <!-- face plate -->
+  <rect x="156" y="182" width="148" height="90" rx="24" fill="#0f2c22"/>
+  <!-- eyes -->
+  <circle cx="196" cy="224" r="15" fill="url(#glass)"/>
+  <circle cx="264" cy="224" r="15" fill="url(#glass)"/>
+  <circle cx="199" cy="221" r="5" fill="#143e2f"/>
+  <circle cx="267" cy="221" r="5" fill="#143e2f"/>
+  <!-- smile -->
+  <path d="M198 250q32 20 64 0" fill="none" stroke="#57c79a" stroke-width="5" stroke-linecap="round"/>
+  <!-- body ports / signed tags -->
+  <rect x="166" y="290" width="54" height="16" rx="8" fill="#0f2c22"/>
+  <rect x="240" y="290" width="54" height="16" rx="8" fill="#0f2c22"/>
+  <!-- little arms -->
+  <rect x="104" y="204" width="24" height="60" rx="12" fill="url(#core)"/>
+  <rect x="332" y="204" width="24" height="60" rx="12" fill="url(#core)"/>
+  <!-- floating "signed" chip -->
+  <g>
+    <rect x="300" y="330" width="120" height="34" rx="17" fill="#ffffff" stroke="#d7ede2"/>
+    <circle cx="320" cy="347" r="6" fill="#3ec27f"/>
+    <text x="334" y="352" fill="#1a5c46" font-size="14" font-weight="600">signed</text>
+  </g>
+  <g>
+    <rect x="40" y="330" width="150" height="34" rx="17" fill="#ffffff" stroke="#d7ede2"/>
+    <circle cx="60" cy="347" r="6" fill="#6aa9f0"/>
+    <text x="74" y="352" fill="#2b3a4a" font-size="13" font-weight="600">every call traced</text>
+  </g>
+</svg>

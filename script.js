@@ -26,32 +26,6 @@ if (USE_SMOOTH && window.Lenis) {
   });
 }
 
-/* ── nav: shadow on scroll ── */
-const nav = document.getElementById('nav');
-const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
-onScroll();
-window.addEventListener('scroll', onScroll, { passive: true });
-
-/* ── mega menus (hover on desktop, click as fallback) ── */
-document.querySelectorAll('.nav-item.has-mega').forEach((item) => {
-  const btn = item.querySelector('.nav-link');
-  const open = (v) => {
-    document.querySelectorAll('.nav-item.has-mega').forEach((o) => {
-      if (o !== item) { o.classList.remove('open'); o.querySelector('.nav-link')?.setAttribute('aria-expanded', 'false'); }
-    });
-    item.classList.toggle('open', v);
-    btn.setAttribute('aria-expanded', String(v));
-  };
-  item.addEventListener('mouseenter', () => open(true));
-  item.addEventListener('mouseleave', () => open(false));
-  btn.addEventListener('click', (e) => { e.preventDefault(); open(!item.classList.contains('open')); });
-});
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.nav-item')) {
-    document.querySelectorAll('.nav-item.open').forEach((o) => o.classList.remove('open'));
-  }
-});
-
 /* ── hero Build / Run / Govern toggle — swaps shot AND its caption chips ── */
 const toggles = document.querySelectorAll('.ht');
 const shots = document.querySelectorAll('.hero-shot');
@@ -71,27 +45,6 @@ setInterval(() => {
   heroIdx = (heroIdx + 1) % keys.length;
   setShot(keys[heroIdx]);
 }, 3600);
-
-/* ── mobile burger (simple: reveal a stacked menu) ── */
-const burger = document.querySelector('.nav-burger');
-burger?.addEventListener('click', () => {
-  const menu = document.querySelector('.nav-menu');
-  const cta = document.querySelector('.nav-cta');
-  const show = menu.style.display !== 'flex';
-  [menu, cta].forEach((el) => {
-    el.style.display = show ? 'flex' : '';
-    el.style.flexDirection = 'column';
-    el.style.position = 'absolute';
-    el.style.top = 'var(--nav-h)';
-    el.style.left = '0';
-    el.style.right = '0';
-    el.style.background = '#fff';
-    el.style.borderBottom = '1px solid var(--line)';
-    el.style.padding = '16px 24px';
-    el.style.gap = '4px';
-    if (!show) el.removeAttribute('style');
-  });
-});
 
 /* ── reveal-on-scroll ── */
 const io = new IntersectionObserver((entries) => {

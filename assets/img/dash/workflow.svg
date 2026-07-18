@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="'JetBrains Mono','SF Mono',ui-monospace,monospace">
+  <rect width="720" height="440" fill="#0f0f13"/>
+  <rect x="0" y="0" width="720" height="46" fill="#141419"/>
+  <line x1="0" y1="46" x2="720" y2="46" stroke="#26262e"/>
+  <circle cx="26" cy="23" r="6" fill="#3ec27f"/>
+  <text x="42" y="28" fill="#e8e8ea" font-size="14" font-weight="500">New workflow</text>
+  <rect x="556" y="12" width="146" height="22" rx="11" fill="#16341f" stroke="#245c39"/>
+  <text x="572" y="27" fill="#3ec27f" font-size="11">run . scheduled</text>
+  <rect x="0" y="46" width="150" height="394" fill="#121217"/>
+  <line x1="150" y1="46" x2="150" y2="440" stroke="#26262e"/>
+  <text x="20" y="82" fill="#8b8b95" font-size="11">STEPS</text>
+  <rect x="14" y="94" width="124" height="26" rx="7" fill="#1d2a22"/>
+  <text x="26" y="111" fill="#3ec27f" font-size="12">1 . collect</text>
+  <text x="26" y="140" fill="#c7c7cf" font-size="12">2 . summarize</text>
+  <text x="26" y="168" fill="#c7c7cf" font-size="12">3 . publish</text>
+  <text x="20" y="360" fill="#8b8b95" font-size="11">TRIGGER</text>
+  <text x="20" y="382" fill="#c7c7cf" font-size="12">cron . daily</text>
+  <line x1="272" y1="152" x2="332" y2="152" stroke="#3ec27f" stroke-width="2"/>
+  <line x1="488" y1="152" x2="552" y2="152" stroke="#3ec27f" stroke-width="2"/>
+  <circle cx="332" cy="152" r="3" fill="#3ec27f"/><circle cx="552" cy="152" r="3" fill="#3ec27f"/>
+  <rect x="180" y="110" width="92" height="90" rx="12" fill="#17171d" stroke="#2c2c36"/>
+  <rect x="192" y="122" width="26" height="26" rx="7" fill="#16341f"/>
+  <rect x="199" y="129" width="12" height="12" rx="3" fill="none" stroke="#3ec27f" stroke-width="1.6"/>
+  <text x="192" y="170" fill="#e8e8ea" font-size="12">Collect</text>
+  <text x="192" y="188" fill="#8b8b95" font-size="10">sources 4</text>
+  <rect x="332" y="110" width="156" height="90" rx="12" fill="#17171d" stroke="#2c2c36"/>
+  <rect x="344" y="122" width="26" height="26" rx="7" fill="#1c2740"/>
+  <text x="350" y="140" fill="#6aa9f0" font-size="15">S</text>
+  <text x="344" y="170" fill="#e8e8ea" font-size="12">Summarize</text>
+  <text x="344" y="188" fill="#8b8b95" font-size="10">model . goal + done</text>
+  <rect x="552" y="110" width="140" height="90" rx="12" fill="#17171d" stroke="#2c2c36"/>
+  <rect x="564" y="122" width="26" height="26" rx="7" fill="#332a16"/>
+  <path d="M571 141l8-8m0 0h-6m6 0v6" stroke="#f5bd4f" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <text x="564" y="170" fill="#e8e8ea" font-size="12">Publish</text>
+  <text x="564" y="188" fill="#8b8b95" font-size="10">to Notion</text>
+  <rect x="180" y="228" width="512" height="176" rx="12" fill="#131318" stroke="#26262e"/>
+  <text x="198" y="254" fill="#8b8b95" font-size="11">TEMPLATED INPUTS</text>
+  <text x="198" y="284" fill="#c7c7cf" font-size="12">source_urls</text>
+  <rect x="330" y="272" width="340" height="18" rx="5" fill="#1b1b22"/><text x="340" y="285" fill="#8b8b95" font-size="12">{{ competitors[] }}</text>
+  <text x="198" y="316" fill="#c7c7cf" font-size="12">tone</text>
+  <rect x="330" y="304" width="340" height="18" rx="5" fill="#1b1b22"/><text x="340" y="317" fill="#8b8b95" font-size="12">concise . exec brief</text>
+  <text x="198" y="348" fill="#c7c7cf" font-size="12">destination</text>
+  <rect x="330" y="336" width="340" height="18" rx="5" fill="#1b1b22"/><text x="340" y="349" fill="#8b8b95" font-size="12">notion://weekly-digest</text>
+  <text x="198" y="382" fill="#3ec27f" font-size="12">wired</text><text x="250" y="382" fill="#8b8b95" font-size="12">3 steps . 0 errors . ready to run</text>
+</svg>

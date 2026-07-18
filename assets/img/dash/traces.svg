@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" font-family="'JetBrains Mono','SF Mono',ui-monospace,monospace">
+  <rect width="720" height="440" fill="#0f0f13"/>
+  <rect x="0" y="0" width="720" height="46" fill="#141419"/>
+  <line x1="0" y1="46" x2="720" y2="46" stroke="#26262e"/>
+  <circle cx="26" cy="23" r="6" fill="#3ec27f"/>
+  <text x="42" y="28" fill="#e8e8ea" font-size="14" font-weight="500">Signed traces</text>
+  <rect x="556" y="12" width="146" height="22" rx="11" fill="#16341f" stroke="#245c39"/>
+  <text x="572" y="27" fill="#3ec27f" font-size="11">ed25519 . verified</text>
+  <!-- column headers -->
+  <text x="24" y="72" fill="#8b8b95" font-size="10.5">SPAN</text>
+  <text x="300" y="72" fill="#8b8b95" font-size="10.5">DURATION</text>
+  <text x="470" y="72" fill="#8b8b95" font-size="10.5">TOKENS</text>
+  <text x="600" y="72" fill="#8b8b95" font-size="10.5">STATUS</text>
+  <line x1="24" y1="82" x2="696" y2="82" stroke="#26262e"/>
+  <!-- rows -->
+  <g font-size="12">
+    <!-- row template -->
+    <g>
+      <rect x="24" y="94" width="672" height="40" rx="8" fill="#16161c"/>
+      <rect x="36" y="106" width="14" height="14" rx="4" fill="#1c2740"/>
+      <text x="60" y="118" fill="#e8e8ea">plan.decompose</text>
+      <text x="120" y="118" fill="#5c6a7a" font-size="10">a1f3.09</text>
+      <text x="300" y="118" fill="#c7c7cf">240ms</text>
+      <text x="470" y="118" fill="#c7c7cf">1,204</text>
+      <text x="600" y="118" fill="#3ec27f">ok</text>
+    </g>
+    <g>
+      <rect x="24" y="140" width="672" height="40" rx="8" fill="#16161c"/>
+      <rect x="36" y="152" width="14" height="14" rx="4" fill="#16341f"/>
+      <text x="60" y="164" fill="#e8e8ea">tool.http_get</text>
+      <text x="120" y="164" fill="#5c6a7a" font-size="10">c7b2.41</text>
+      <text x="300" y="164" fill="#c7c7cf">318ms</text>
+      <text x="470" y="164" fill="#c7c7cf">— </text>
+      <text x="600" y="164" fill="#3ec27f">ok</text>
+    </g>
+    <g>
+      <rect x="24" y="186" width="672" height="40" rx="8" fill="#16161c"/>
+      <rect x="36" y="198" width="14" height="14" rx="4" fill="#3a1a1a"/>
+      <text x="60" y="210" fill="#e8e8ea">tool.db_write</text>
+      <text x="120" y="210" fill="#5c6a7a" font-size="10">e0d9.77</text>
+      <text x="300" y="210" fill="#c7c7cf">92ms</text>
+      <text x="470" y="210" fill="#c7c7cf">— </text>
+      <text x="600" y="210" fill="#f0605c">blocked</text>
+    </g>
+    <g>
+      <rect x="24" y="232" width="672" height="40" rx="8" fill="#16161c"/>
+      <rect x="36" y="244" width="14" height="14" rx="4" fill="#1c2740"/>
+      <text x="60" y="256" fill="#e8e8ea">model.summarize</text>
+      <text x="120" y="256" fill="#5c6a7a" font-size="10">4fa1.18</text>
+      <text x="300" y="256" fill="#c7c7cf">1.9s</text>
+      <text x="470" y="256" fill="#c7c7cf">3,880</text>
+      <text x="600" y="256" fill="#3ec27f">ok</text>
+    </g>
+    <g>
+      <rect x="24" y="278" width="672" height="40" rx="8" fill="#16161c"/>
+      <rect x="36" y="290" width="14" height="14" rx="4" fill="#332a16"/>
+      <text x="60" y="302" fill="#e8e8ea">tool.publish</text>
+      <text x="120" y="302" fill="#5c6a7a" font-size="10">9b3c.52</text>
+      <text x="300" y="302" fill="#c7c7cf">140ms</text>
+      <text x="470" y="302" fill="#c7c7cf">— </text>
+      <text x="600" y="302" fill="#3ec27f">ok</text>
+    </g>
+  </g>
+  <!-- footer -->
+  <line x1="24" y1="342" x2="696" y2="342" stroke="#26262e"/>
+  <text x="24" y="368" fill="#8b8b95" font-size="11">5 spans . 1 blocked at kernel . every span stamped</text>
+  <rect x="470" y="352" width="226" height="26" rx="7" fill="#131318" stroke="#26262e"/>
+  <text x="486" y="369" fill="#3ec27f" font-size="10.5">sig 3f9a...c1  tamper-evident</text>
+</svg>

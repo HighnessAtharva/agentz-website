@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 150" font-family="'JetBrains Mono','SF Mono',ui-monospace,monospace">
+  <rect width="400" height="150" fill="#0f0f13"/>
+  <text x="18" y="30" fill="#3ec27f" font-size="12">env . signed</text>
+  <text x="300" y="30" fill="#5c6a7a" font-size="10">one object</text>
+  <line x1="18" y1="40" x2="382" y2="40" stroke="#26262e"/>
+  <g font-size="11">
+    <text x="18" y="62" fill="#8b8b95">identity</text><text x="150" y="62" fill="#e8e8ea">agent://digest</text>
+    <text x="18" y="84" fill="#8b8b95">packages</text><text x="150" y="84" fill="#e8e8ea">pinned . 12</text>
+    <text x="18" y="106" fill="#8b8b95">tools</text><text x="150" y="106" fill="#e8e8ea">http, notion, slack</text>
+    <text x="18" y="128" fill="#8b8b95">hosts</text><text x="150" y="128" fill="#3ec27f">1 boundary . sealed</text>
+  </g>
+</svg>
