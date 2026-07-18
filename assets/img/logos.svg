@@ -1,25 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 250" font-family="'General Sans',system-ui,sans-serif">
   <rect width="940" height="250" rx="20" fill="#ffffff"/>
-  <rect x="1" y="1" width="938" height="248" rx="19" fill="none" stroke="#e7e5df"/>
-  <g font-size="14" font-weight="600" fill="#4a4a48" text-anchor="middle">
-    <!-- row 1 -->
+  <rect x="1" y="1" width="938" height="248" rx="19" fill="none" stroke="#e2e6ef"/>
+  <g font-size="14" font-weight="600" fill="#3a3f52" text-anchor="middle">
     <g>
-      <rect x="15"  y="60" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="74"  y="91">OpenAI</text>
-      <rect x="147" y="60" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="206" y="91">Anthropic</text>
-      <rect x="279" y="60" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="338" y="91">Gemini</text>
-      <rect x="411" y="60" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="470" y="91">KubeArmor</text>
-      <rect x="543" y="60" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="602" y="91">OpenBao</text>
-      <rect x="675" y="60" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="734" y="88" font-size="12.5">OpenTelemetry</text>
-      <rect x="807" y="60" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="866" y="91">Sigstore</text>
+      <rect x="15"  y="60" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="74"  y="91">OpenAI</text>
+      <rect x="147" y="60" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="206" y="91">Anthropic</text>
+      <rect x="279" y="60" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="338" y="91">Gemini</text>
+      <rect x="411" y="60" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="470" y="91">KubeArmor</text>
+      <rect x="543" y="60" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="602" y="91">OpenBao</text>
+      <rect x="675" y="60" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="734" y="88" font-size="12.5">OpenTelemetry</text>
+      <rect x="807" y="60" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="866" y="91">Sigstore</text>
     </g>
-    <!-- row 2 -->
     <g>
-      <rect x="81"  y="138" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="140" y="169">Kubernetes</text>
-      <rect x="213" y="138" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="272" y="169">Slack</text>
-      <rect x="345" y="138" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="404" y="169">Jira</text>
-      <rect x="477" y="138" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="536" y="169">Notion</text>
-      <rect x="609" y="138" width="118" height="52" rx="12" fill="#faf9f6" stroke="#eceae4"/><text x="668" y="169">GitHub</text>
-      <rect x="741" y="138" width="118" height="52" rx="12" fill="#eef5f1" stroke="#d7ede2"/><text x="800" y="169" fill="#1a5c46">MCP</text>
+      <rect x="81"  y="138" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="140" y="169">Kubernetes</text>
+      <rect x="213" y="138" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="272" y="169">Slack</text>
+      <rect x="345" y="138" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="404" y="169">Jira</text>
+      <rect x="477" y="138" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="536" y="169">Notion</text>
+      <rect x="609" y="138" width="118" height="52" rx="12" fill="#f6f8fd" stroke="#eaedf5"/><text x="668" y="169">GitHub</text>
+      <rect x="741" y="138" width="118" height="52" rx="12" fill="#e6ecff" stroke="#c9d5ff"/><text x="800" y="169" fill="#2f4bd6">MCP</text>
     </g>
   </g>
 </svg>

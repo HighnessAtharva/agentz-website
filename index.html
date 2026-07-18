@@ -4,189 +4,307 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>AgentZ — Zero Trust Agentic AI Security Platform</title>
-<meta name="description" content="AgentZ is a Zero Trust Agentic AI Security Platform. Leverage the power of Agentic AI while ensuring safety." />
+<meta name="description" content="AgentZ is a Zero Trust Agentic AI Security Platform by AccuKnox. Build, run and govern real agents, secure by default." />
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=32" />
+<link rel="stylesheet" href="styles.css?v=33" />
 </head>
 <body>
+
+<!-- ══════════════════ ICON SPRITE ══════════════════ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-skills" viewBox="0 0 24 24"><path d="M12 3l1.6 4.4L18 9l-4.4 1.6L12 15l-1.6-4.4L6 9l4.4-1.6L12 3Z"/><path d="M18.5 14.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8Z"/></symbol>
+    <symbol id="i-workflows" viewBox="0 0 24 24"><rect x="3" y="4" width="6" height="5" rx="1.4"/><rect x="15" y="15" width="6" height="5" rx="1.4"/><path d="M6 9v4a3 3 0 0 0 3 3h6"/></symbol>
+    <symbol id="i-context" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5Z"/><path d="M3 13l9 5 9-5"/></symbol>
+    <symbol id="i-teams" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 6.2a3 3 0 0 1 0 5.6"/><path d="M17 14.3A5.5 5.5 0 0 1 20.5 19"/></symbol>
+    <symbol id="i-guardrails" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3Z"/><path d="M9 12l2 2 4-4"/></symbol>
+    <symbol id="i-audit" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6V3Z"/><path d="M14 3v4h4"/><path d="M9 13l1.5 1.5L14 11"/></symbol>
+    <symbol id="i-database" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></symbol>
+    <symbol id="i-api" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></symbol>
+    <symbol id="i-mcp" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.4"/><circle cx="5" cy="18" r="2.4"/><circle cx="19" cy="18" r="2.4"/><path d="M12 7.4v3.6M10.2 12.8L6.8 16M13.8 12.8L17.2 16"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="i-files" viewBox="0 0 24 24"><path d="M7 3h6l4 4v14H7V3Z"/><path d="M13 3v4h4"/><path d="M10 12h4M10 16h4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="12" r="4"/><path d="M12 12h9M18 12v3M15 12v2.5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3Z"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="2.6"/></symbol>
+    <symbol id="i-secops" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.4-3 7.6-7 9-4-1.4-7-4.6-7-9V6l7-3Z"/><path d="M12 8v4M12 15v.5"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><rect x="7" y="12" width="3" height="5"/><rect x="12" y="8" width="3" height="9"/><rect x="17" y="5" width="3" height="12"/></symbol>
+    <symbol id="i-headset" viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="3" y="13" width="4" height="6" rx="1.6"/><rect x="17" y="13" width="4" height="6" rx="1.6"/><path d="M20 19a4 4 0 0 1-4 3h-2"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M6 3h12v18l-2.5-1.5L13 21l-2.5-1.5L8 21l-2-1.2V3Z"/><path d="M9 8h6M9 12h6"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="7" rx="1.6"/><rect x="3" y="13" width="18" height="7" rx="1.6"/><path d="M7 7.5h.5M7 16.5h.5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5l11 6.5-11 6.5v-13Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.8"/><path d="M4 18l5-5 4 4 3-3 4 4"/></symbol>
+    <symbol id="i-model" viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3Z"/><path d="M12 8l4 2.2v3.6L12 16l-4-2.2v-3.6L12 8Z"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13 3L5 13h5l-1 8 8-10h-5l1-8Z"/></symbol>
+  </defs>
+</svg>
+
+<!-- scroll progress -->
+<div class="scrollbar" aria-hidden="true"><span id="scrollbar-fill"></span></div>
+<div class="sec-counter" aria-hidden="true"><span id="sec-num">01</span></div>
 
 <main id="top">
 
 <!-- ══════════════════ HERO ══════════════════ -->
-<section class="hero">
-  <div class="hero-inner">
-    <p class="hero-kicker">AgentZ · by AccuKnox</p>
-    <h1 class="hero-title">Zero Trust Agentic AI<br><span class="ital">Security Platform</span></h1>
-    <p class="hero-sub">Leverage the power of Agentic AI while ensuring safety.</p>
+<section class="hero" data-sec="01">
+  <div class="wrap hero-inner">
+    <p class="hero-eyebrow">By AccuKnox · Zero Trust for Agentic AI</p>
+    <h1 class="hero-brand">AgentZ</h1>
+    <p class="hero-title">Zero Trust Agentic AI<br><span class="ital">Security Platform</span></p>
+    <p class="hero-sub">Build, run and govern real agents. Secure by default, so the power of agentic AI never costs you control.</p>
     <div class="hero-actions">
-      <a class="btn btn-dark btn-lg" href="#waitlist" data-tally-open="RGlZ1l" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the waitlist</a>
+      <a class="btn btn-primary btn-lg" href="#waitlist" data-tally-open="RGlZ1l" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the waitlist</a>
       <a class="btn btn-line btn-lg" href="#platform">See the platform</a>
     </div>
-    <p class="hero-trust">Trusted by security-first teams · No credit card required</p>
+    <div class="hero-pills">
+      <span class="pill"><svg class="ico"><use href="#i-skills"/></svg><span class="hl hl-a">Skills</span></span>
+      <span class="pill"><svg class="ico"><use href="#i-workflows"/></svg><span class="hl hl-b">Workflows</span></span>
+      <span class="pill"><svg class="ico"><use href="#i-teams"/></svg><span class="hl hl-c">Teams</span></span>
+      <span class="pill"><svg class="ico"><use href="#i-guardrails"/></svg>Secure by default</span>
+    </div>
   </div>
 </section>
 
-<!-- ══════════════════ DARK PLATFORM ZONE ══════════════════ -->
-<div class="skyzone">
-
-<!-- ── platform capabilities ── -->
-<section class="featsky" id="platform">
+<!-- ══════════════════ PLATFORM ARCHITECTURE ══════════════════ -->
+<section class="arch" id="platform" data-sec="02">
   <div class="wrap">
-    <p class="section-kicker">The platform</p>
-    <h2 class="section-h">Build, run and govern <span class="ital">real</span> agents.</h2>
-    <div class="glassbento">
-      <article class="gcard big lead">
-        <div class="gc-txt"><h3>Skills &amp; Workflows</h3><p>Describe the job. AgentZ writes the skill, wires each step, and templates the inputs.</p></div>
-      </article>
-      <article class="gcard big">
-        <div class="gc-txt"><h3>Conversational Ops</h3><p>Talk to your agents the way you think. Ask, and it builds, edits and schedules the run.</p></div>
-      </article>
-      <article class="gcard big">
-        <div class="gc-txt"><h3>Reviews &amp; Approvals</h3><p>Signed, tamper-evident traces you can read, review and approve, down to the token.</p></div>
-      </article>
-      <article class="gcard big">
-        <div class="gc-txt"><h3>Policy Edge</h3><p>Every secret resolves at the edge, scoped to one call, then dropped. The agent holds a placeholder, never the key.</p></div>
-      </article>
-      <article class="gcard"><div class="gc-ico">▤</div><h3>Environments</h3><p>One signed object holds identity, packages, tools and hosts.</p></article>
-      <article class="gcard"><div class="gc-ico">⧉</div><h3>Connectors</h3><p>Databases, SaaS APIs, MCP tools and files, in a governed graph.</p></article>
-      <article class="gcard"><div class="gc-ico">◈</div><h3>Guardrails</h3><p>Default deny, enforced at the kernel on every call.</p></article>
+    <p class="section-eyebrow">The platform</p>
+    <h2 class="section-h2">One control plane for every agent.</h2>
+    <div class="arch-frame">
+      <span class="arch-label">AgentZ</span>
+      <div class="arch-grid">
+        <article class="arch-card"><span class="arch-ico t-a"><svg class="ico"><use href="#i-skills"/></svg></span><h3>Skills</h3><p>Reusable, versioned building blocks.</p></article>
+        <article class="arch-card"><span class="arch-ico t-b"><svg class="ico"><use href="#i-workflows"/></svg></span><h3>Workflows</h3><p>Chain steps, schedule, hand off work.</p></article>
+        <article class="arch-card"><span class="arch-ico t-c"><svg class="ico"><use href="#i-context"/></svg></span><h3>Context</h3><p>Shared memory, files, and knowledge.</p></article>
+        <article class="arch-card"><span class="arch-ico t-d"><svg class="ico"><use href="#i-teams"/></svg></span><h3>Teams</h3><p>Roles, ownership, shared scope.</p></article>
+        <article class="arch-card"><span class="arch-ico t-a"><svg class="ico"><use href="#i-guardrails"/></svg></span><h3>Guardrails</h3><p>Secure by default. No standing access.</p></article>
+        <article class="arch-card"><span class="arch-ico t-b"><svg class="ico"><use href="#i-audit"/></svg></span><h3>Audit</h3><p>Every step recorded and replayable.</p></article>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- ── build · run · govern (pinned giant type) ── -->
-<section class="sky" id="brg">
-  <div class="sky-pin">
-    <div class="sky-track">
-      <div class="sky-slide" data-i="0">
-        <div class="ss-in">
-          <h2>Build</h2>
-          <p>Describe the job in a sentence. AgentZ writes the skill and wires every step.</p>
+    <div class="arch-rails">
+      <div class="arch-rail">
+        <span class="rail-label">Your tools &amp; data</span>
+        <div class="rail-items">
+          <span class="rail-chip"><svg class="ico"><use href="#i-database"/></svg>Databases</span>
+          <span class="rail-chip"><svg class="ico"><use href="#i-api"/></svg>SaaS APIs</span>
+          <span class="rail-chip"><svg class="ico"><use href="#i-mcp"/></svg>MCP tools</span>
+          <span class="rail-chip"><svg class="ico"><use href="#i-files"/></svg>Files</span>
         </div>
       </div>
-      <div class="sky-slide" data-i="1">
-        <div class="ss-in">
-          <h2>Run</h2>
-          <p>Chat, API, CLI or a schedule, on any framework, on any model.</p>
-        </div>
-      </div>
-      <div class="sky-slide" data-i="2">
-        <div class="ss-in">
-          <h2>Govern</h2>
-          <p>Resolved at the edge, checked at the kernel, stamped to a signed trace.</p>
+      <div class="arch-rail">
+        <span class="rail-label">Any model, any provider</span>
+        <div class="rail-items">
+          <span class="rail-chip"><svg class="ico"><use href="#i-model"/></svg>OpenAI</span>
+          <span class="rail-chip"><svg class="ico"><use href="#i-model"/></svg>Anthropic</span>
+          <span class="rail-chip"><svg class="ico"><use href="#i-model"/></svg>Gemini</span>
+          <span class="rail-chip"><svg class="ico"><use href="#i-model"/></svg>Open source</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-</div><!-- /skyzone -->
+<!-- ══════════════════ THREE PILLARS ══════════════════ -->
+<section class="feature" id="pillars" data-sec="03">
+  <div class="wrap">
+    <div class="feature-head">
+      <span class="feature-ico"><svg class="ico"><use href="#i-skills"/></svg></span>
+      <div class="feature-head-copy">
+        <h2 class="feature-title">A platform for the agents <span class="hl hl-a">your teams already want to build</span>.</h2>
+        <p class="feature-lead">Compose <span class="hl hl-a">skills</span>, wire them into <span class="hl hl-b">workflows</span>, and roll them out across your <span class="hl hl-c">organization</span>. Bring any model or framework. Security stays underneath, so you focus on what the agents actually do.</p>
+      </div>
+      <span class="feature-tag">Three pillars · one control plane</span>
+    </div>
+    <div class="ncards ncards-3">
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-skills"/></svg></span><span class="ncard-n">01</span></div><h3><span class="hl hl-a">Skill management</span></h3><p>Package capabilities as reusable skills. Versioned, testable, and shared across every agent your team runs.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-teams"/></svg></span><span class="ncard-n">02</span></div><h3><span class="hl hl-c">Organizational support</span></h3><p>Roles, teams, and shared context so every function can put agents to work, not just the platform team.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><span class="ncard-n">03</span></div><h3><span class="hl hl-b">Workflow support</span></h3><p>Chain skills into workflows. Trigger on a schedule, an event, or a request. Hand off cleanly between agents.</p></article>
+    </div>
+  </div>
+</section>
 
-<!-- ══════════════════ RUNTIME INTELLIGENCE ══════════════════ -->
-<section class="deep" id="f-edge">
-  <div class="wrap deep-grid rev">
-    <div class="deep-copy">
-      <p class="section-kicker">Runtime intelligence</p>
+<!-- ══════════════════ BUILD · RUN · GOVERN (scroll stepper) ══════════════════ -->
+<section class="stepper" id="brg" data-sec="04">
+  <div class="stepper-sticky">
+    <div class="wrap stepper-grid">
+      <div class="stepper-left">
+        <span class="stepper-eyebrow">Build · Run · Govern</span>
+        <div class="step-words">
+          <div class="step-word is-on" data-step="0">
+            <h2>Build</h2>
+            <p>Describe the job in a sentence. AgentZ writes the skill and wires every step.</p>
+          </div>
+          <div class="step-word" data-step="1">
+            <h2>Run</h2>
+            <p>Chat, API, CLI, or a schedule. Any framework, any model, no redeploy.</p>
+          </div>
+          <div class="step-word" data-step="2">
+            <h2>Govern</h2>
+            <p>Resolved at the edge, checked at the kernel, stamped to a signed trace.</p>
+          </div>
+        </div>
+        <div class="step-dots">
+          <button class="step-dot is-on" data-go="0"><span>01</span> Build</button>
+          <button class="step-dot" data-go="1"><span>02</span> Run</button>
+          <button class="step-dot" data-go="2"><span>03</span> Govern</button>
+        </div>
+      </div>
+      <div class="stepper-right">
+        <div class="step-screen is-on" data-screen="0"><img src="assets/img/screens/build.svg" alt="Build: compose a skill from one sentence (placeholder screenshot)"></div>
+        <div class="step-screen" data-screen="1"><img src="assets/img/screens/run.svg" alt="Run: trigger and schedule agents from chat (placeholder screenshot)"></div>
+        <div class="step-screen" data-screen="2"><img src="assets/img/screens/govern.svg" alt="Govern: signed, replayable traces (placeholder screenshot)"></div>
+        <span class="screen-tag">Placeholder · drop your product screenshot here</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SECURE BY DEFAULT (four defaults) ══════════════════ -->
+<section class="feature alt" id="secure" data-sec="05">
+  <div class="wrap">
+    <div class="feature-head">
+      <span class="feature-ico"><svg class="ico"><use href="#i-shield"/></svg></span>
+      <div class="feature-head-copy">
+        <h2 class="feature-title">Secure by default, so you never have to <span class="hl hl-a">bolt it on later</span>.</h2>
+        <p class="feature-lead">You focus on <span class="hl hl-a">skills</span> and <span class="hl hl-b">workflows</span>. AgentZ quietly handles the four things that usually turn an agent demo into a production incident.</p>
+      </div>
+      <span class="feature-tag">Four defaults · zero configuration</span>
+    </div>
+    <div class="ncards ncards-4">
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-key"/></svg></span><span class="ncard-n">01</span></div><h3>Credentials, handled</h3><p>Secrets stay in the vault. Agents get scoped access at the moment they need it, and never see the key.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-shield"/></svg></span><span class="ncard-n">02</span></div><h3>Just-enough access</h3><p>Every skill runs with the narrowest permissions that get the job done. No standing cloud roles.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-eye"/></svg></span><span class="ncard-n">03</span></div><h3>Runtime you can see</h3><p>Every action, tool call, and decision is visible in one place, in real time.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-audit"/></svg></span><span class="ncard-n">04</span></div><h3>Audit, out of the box</h3><p>A signed trace for every run. SOC and compliance reviews stop being a project.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SIX DOMAINS ══════════════════ -->
+<section class="feature" id="domains" data-sec="06">
+  <div class="wrap">
+    <div class="feature-head">
+      <span class="feature-ico"><svg class="ico"><use href="#i-bolt"/></svg></span>
+      <div class="feature-head-copy">
+        <h2 class="feature-title">Real work, left to run <span class="hl hl-b">on its own</span>.</h2>
+        <p class="feature-lead">The first agents in production are not doing science fiction. They are doing the spreadsheet, the ticket, the on-call page, the quarterly report. Boring, valuable, repeatable.</p>
+      </div>
+      <span class="feature-tag">Six domains · production ready</span>
+    </div>
+    <div class="ncards ncards-3">
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-server"/></svg></span><span class="ncard-n">01</span></div><h3>IT and DevOps</h3><p>Triage alerts, run remediations, and automate routine ops on a schedule.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-secops"/></svg></span><span class="ncard-n">02</span></div><h3>Security operations</h3><p>Enrich incidents and run guarded response workflows over real tools.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-chart"/></svg></span><span class="ncard-n">03</span></div><h3>Data and reporting</h3><p>Pull, summarize, and distribute recurring reports across systems.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-headset"/></svg></span><span class="ncard-n">04</span></div><h3>Customer ops</h3><p>Resolve tickets and update records with auditable, scoped access.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-receipt"/></svg></span><span class="ncard-n">05</span></div><h3>Back office</h3><p>Automate finance, HR, and procurement tasks under tight controls.</p></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><span class="ncard-n">06</span></div><h3>Custom workflows</h3><p>Compose your own agents from marketplace building blocks.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ DEMO VIDEOS ══════════════════ -->
+<section class="videos" id="demos" data-sec="07">
+  <div class="wrap">
+    <p class="section-eyebrow">See it run · demo videos</p>
+    <h2 class="section-h2">Watch AgentZ work.</h2>
+    <div class="video-grid">
+      <a class="video-card" href="#waitlist">
+        <div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div>
+        <b>Build a skill in chat</b><p>From one sentence to a wired, testable skill.</p>
+      </a>
+      <a class="video-card" href="#waitlist">
+        <div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div>
+        <b>Schedule an agent</b><p>Set a cron, edit from chat, no redeploy.</p>
+      </a>
+      <a class="video-card" href="#waitlist">
+        <div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div>
+        <b>Read a signed trace</b><p>Inspect every span, down to the token.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ RUNTIME INTELLIGENCE (screenshot slot) ══════════════════ -->
+<section class="runtime" id="f-edge" data-sec="08">
+  <div class="wrap runtime-grid">
+    <div class="runtime-copy">
+      <p class="section-eyebrow">Runtime intelligence</p>
       <h2>Understand <span class="ital">everything</span> your agent does.</h2>
       <p>Runtime telemetry logs every egress by domain, port and protocol. Each connection is allowed or blocked at the kernel and recorded, so nothing leaves without a record.</p>
+      <a class="link-arrow" href="#waitlist">Get early access <svg class="ico ico-sm"><use href="#i-arrow"/></svg></a>
     </div>
-    <div class="deep-media">
-      <div class="media-panel"><img src="assets/img/dash/network.svg" alt="Network egress table: each destination allowed or blocked at the kernel with IP, port and protocol"></div>
+    <div class="runtime-media">
+      <div class="ph ph-wide"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Runtime telemetry screenshot · 1600 × 1000</span></div>
     </div>
-  </div>
-</section>
-
-<!-- ══════════════════ SCALE STAT ══════════════════ -->
-<section class="scale-sec" id="scale">
-  <div class="wrap glass-scale">
-    <div class="scale-viz">
-      <img src="assets/img/scenes/robot.svg" alt="An agent bound to its signed environment, every call traced behind it">
-    </div>
-    <div class="scale-copy">
-      <h2>AgentZ unblocks <span class="ital">real work</span> at scale.</h2>
-      <p class="scale-stat"><span class="scale-num">61%</span> of agent incidents trace back to credentials the agent never needed to hold. AgentZ holds none of them.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ SOLUTIONS ══════════════════ -->
-<section class="solutions" id="solutions">
-  <div class="wrap">
-    <p class="section-kicker">Solutions</p>
-    <h2 class="sol-title">Put agents to work wherever the work is.</h2>
-
-    <div class="bento">
-      <a class="bento-tile tile-hero" href="#waitlist">
-        <span class="bt-tag">Security operations</span>
-        <b>Enrich incidents, respond with a guard.</b>
-        <p>Run guarded response over real tools, with a signed trace behind every step.</p>
-        <span class="bt-go">Explore →</span>
-      </a>
-      <a class="bento-tile" href="#waitlist"><img class="bt-ico" src="assets/img/icons/icon-devops.svg" alt="" aria-hidden="true"><b>DevOps automation</b><p>Triage alerts and run guarded remediations on a schedule.</p></a>
-      <a class="bento-tile" href="#waitlist"><img class="bt-ico" src="assets/img/icons/icon-competitive.svg" alt="" aria-hidden="true"><b>Competitive intel</b><p>Crawl competitors on a cron. Ship a scoped digest weekly.</p></a>
-      <a class="bento-tile" href="#waitlist"><img class="bt-ico" src="assets/img/icons/icon-data.svg" alt="" aria-hidden="true"><b>Data &amp; reporting</b><p>Pull, summarize and route reports to the right owner.</p></a>
-      <a class="bento-tile" href="#waitlist"><img class="bt-ico" src="assets/img/icons/icon-customer.svg" alt="" aria-hidden="true"><b>Customer intel</b><p>Before a meeting, pull the company, its stack, and where you fit.</p></a>
-
-      <div class="bento-tile tile-industries">
-        <span class="bt-tag">By industry</span>
-        <div class="ind-cloud">
-          <span><img src="assets/img/icons/icon-financial.svg" alt="" aria-hidden="true">Financial services</span>
-          <span><img src="assets/img/icons/icon-healthcare.svg" alt="" aria-hidden="true">Healthcare &amp; life sciences</span>
-          <span><img src="assets/img/icons/icon-tech.svg" alt="" aria-hidden="true">Tech &amp; SaaS</span>
-          <span><img src="assets/img/icons/icon-public.svg" alt="" aria-hidden="true">Public sector</span>
-          <span><img src="assets/img/icons/icon-mssp.svg" alt="" aria-hidden="true">MSSPs &amp; agencies</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="enterprise" id="enterprise">
-      <div class="ent-copy">
-        <h3>Scale agent output with <span class="ital">enterprise-grade</span> security.</h3>
-        <p>SSO, custom permissions, VPC &amp; air-gap deployment, and kernel-level proof on every call.</p>
-      </div>
-      <a class="btn btn-dark btn-lg" href="#waitlist" data-tally-open="RGlZ1l" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the waitlist</a>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ FLOW DIAGRAM ══════════════════ -->
-<section class="diagram-sec" id="how">
-  <div class="wrap">
-    <div class="sec-head center">
-      <p class="section-kicker">How it works</p>
-      <h2>Intent in. <span class="ital">Governed action out.</span></h2>
-      <p class="sec-lead">Skills, workflows, context and guardrails in the middle. A policy edge on every call. Observability, audit and trace running underneath.</p>
-    </div>
-    <figure class="diagram-card">
-      <img src="assets/img/flow-diagram.svg" alt="How work flows through AgentZ: intent from chat, API, CLI or a schedule into AgentZ (skills, workflows, context, guardrails) across the policy edge to tools (MCP, databases, SaaS APIs, files) and models (OpenAI, Anthropic, Gemini, open-source), with observability, audit and trace underneath">
-    </figure>
   </div>
 </section>
 
 <!-- ══════════════════ INTEGRATIONS ══════════════════ -->
-<section class="integrations">
+<section class="integrations" data-sec="09">
   <div class="wrap center">
-    <h2 class="int-h">AgentZ is compatible with your <span class="ital">full</span> stack.</h2>
+    <p class="section-eyebrow">Compatible</p>
+    <h2 class="int-h">AgentZ works with your <span class="ital">full</span> stack.</h2>
     <figure class="int-logos">
       <img src="assets/img/logos.svg" alt="Compatible with OpenAI, Anthropic, Gemini, KubeArmor, OpenBao, OpenTelemetry, Sigstore, Kubernetes, Slack, Jira, Notion, GitHub and MCP">
     </figure>
   </div>
 </section>
 
+<!-- ══════════════════ TEMPLATE SECTIONS (empty, ready to fill) ══════════════════ -->
+<section class="tpl" data-sec="10">
+  <div class="wrap">
+    <p class="section-eyebrow tpl-eyebrow">Section 10 · template</p>
+    <div class="tpl-grid">
+      <div class="tpl-copy">
+        <h2 class="tpl-h">Your headline goes here.</h2>
+        <p class="tpl-lead">Placeholder copy. Replace this with the story for this section. Two or three sentences that carry one idea.</p>
+        <a class="link-arrow muted" href="#">Call to action <svg class="ico ico-sm"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="ph ph-tall"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 1200 × 1400</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tpl alt-bg" data-sec="11">
+  <div class="wrap">
+    <p class="section-eyebrow tpl-eyebrow">Section 11 · template</p>
+    <h2 class="tpl-h center">A centered headline for a wide idea.</h2>
+    <p class="tpl-lead center">Placeholder lead. Swap in the copy that belongs here.</p>
+    <div class="tpl-trio">
+      <div class="ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image</span></div>
+      <div class="ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image</span></div>
+      <div class="ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tpl" data-sec="12">
+  <div class="wrap">
+    <p class="section-eyebrow tpl-eyebrow">Section 12 · template</p>
+    <div class="tpl-grid rev">
+      <div class="ph ph-tall"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 1200 × 1400</span></div>
+      <div class="tpl-copy">
+        <h2 class="tpl-h">Another block to fill in.</h2>
+        <p class="tpl-lead">Placeholder copy. This template pairs a media slot with a short block of text.</p>
+        <a class="link-arrow muted" href="#">Call to action <svg class="ico ico-sm"><use href="#i-arrow"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ WAITLIST ══════════════════ -->
-<section class="demo" id="waitlist">
+<section class="demo" id="waitlist" data-sec="13">
   <div class="wrap demo-grid">
     <div class="demo-copy">
       <h2>Join the <span class="ital">waitlist.</span></h2>
       <p>AgentZ is in preview. Leave your details and we'll get you in as we open access, build, run and govern, end to end.</p>
       <ul class="demo-points">
-        <li>Early access as spots open</li>
-        <li>First look at policy edge and signed traces</li>
-        <li>No credit card, one email when you're in</li>
+        <li><svg class="ico ico-sm"><use href="#i-guardrails"/></svg> Early access as spots open</li>
+        <li><svg class="ico ico-sm"><use href="#i-audit"/></svg> First look at the policy edge and signed traces</li>
+        <li><svg class="ico ico-sm"><use href="#i-skills"/></svg> No credit card, one email when you're in</li>
       </ul>
     </div>
     <div class="wl-embed">
@@ -202,12 +320,14 @@
   <div class="wrap foot-top">
     <p class="foot-copy">© 2026 AccuKnox. All rights reserved.</p>
   </div>
-  <div class="foot-wordmark" aria-hidden="true">AgentZ</div>
+  <div class="foot-wordmark-wrap">
+    <div class="foot-wordmark">AgentZ</div>
+  </div>
 </footer>
 
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=32"></script>
+<script src="script.js?v=33"></script>
 </body>
 </html>

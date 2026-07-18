@@ -12,7 +12,11 @@ AgentZ is a Zero Trust Agentic AI Security Platform by AccuKnox. It is a **platf
 
 ## Direction
 
-Bold and typographic. High contrast: off-white base, near-black green-tinted ink, deep-green accent (`--accent`), one committed dark zone. Real contrast over pastel washes. References: neatlogs.com, factors.ai (stark type, minimal chrome). Keep the giant `AgentZ` wordmark footer.
+Bold and typographic. Blue system: deep navy `#000025` (brand, dark zones, primary buttons) with an electric blue `#2f4bd6` for accents, icons, and highlighter marks. Off-white base, near-black navy ink. No green anywhere. One committed dark navy zone (the Build/Run/Govern stepper). References: neatlogs.com, factors.ai (stark type, minimal chrome). Keep the giant `AgentZ` wordmark footer, fully visible with the copyright left-aligned. `AgentZ` is the first big thing in the hero.
+
+## Icons and placeholders
+
+Icons come from the inline SVG sprite at the top of `index.html` (`<use href="#i-...">`), styled with `currentColor`. Add new icons there, never re-import a separate icon set. Image placeholders use the `.ph` component (dashed border, mono label) so slots are obviously swappable.
 
 ## Copy
 

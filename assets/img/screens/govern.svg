@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'General Sans',system-ui,sans-serif">
+  <rect width="800" height="500" rx="14" fill="#ffffff"/>
+  <rect x="0" y="0" width="800" height="52" rx="14" fill="#f5f7fc"/>
+  <rect x="0" y="38" width="800" height="14" fill="#f5f7fc"/>
+  <rect x="24" y="18" width="16" height="16" rx="5" fill="#2f4bd6"/>
+  <text x="50" y="31" fill="#0b0b28" font-size="14" font-weight="600">Signed traces</text>
+  <rect x="612" y="14" width="164" height="24" rx="12" fill="#e6ecff"/>
+  <text x="630" y="30" fill="#2f4bd6" font-size="11.5" font-weight="600" font-family="'JetBrains Mono',monospace">ed25519 . verified</text>
+  <!-- column head -->
+  <g font-family="'JetBrains Mono',monospace" font-size="10.5" fill="#7a7f92" letter-spacing="1">
+    <text x="28" y="86">SPAN</text><text x="360" y="86">DURATION</text><text x="500" y="86">TOKENS</text><text x="640" y="86">STATUS</text>
+  </g>
+  <line x1="28" y1="96" x2="772" y2="96" stroke="#e2e6ef"/>
+  <g font-size="12.5">
+    <rect x="28" y="106" width="744" height="42" rx="9" fill="#f5f7fc"/>
+    <rect x="42" y="119" width="16" height="16" rx="5" fill="#e6ecff"/>
+    <text x="70" y="132" fill="#0b0b28">plan.decompose</text><text x="360" y="132" fill="#454a5e">240ms</text><text x="500" y="132" fill="#454a5e">1,204</text>
+    <rect x="640" y="118" width="66" height="20" rx="10" fill="#e6ffef"/><text x="654" y="132" fill="#0a7a48" font-size="11">ok</text>
+
+    <rect x="28" y="154" width="744" height="42" rx="9" fill="#f5f7fc"/>
+    <rect x="42" y="167" width="16" height="16" rx="5" fill="#e6ecff"/>
+    <text x="70" y="180" fill="#0b0b28">tool.http_get</text><text x="360" y="180" fill="#454a5e">318ms</text><text x="500" y="180" fill="#454a5e">—</text>
+    <rect x="640" y="166" width="66" height="20" rx="10" fill="#e6ffef"/><text x="654" y="180" fill="#0a7a48" font-size="11">ok</text>
+
+    <rect x="28" y="202" width="744" height="42" rx="9" fill="#fdeeee"/>
+    <rect x="42" y="215" width="16" height="16" rx="5" fill="#fadcdc"/>
+    <text x="70" y="228" fill="#0b0b28">tool.db_write</text><text x="360" y="228" fill="#454a5e">92ms</text><text x="500" y="228" fill="#454a5e">—</text>
+    <rect x="640" y="214" width="82" height="20" rx="10" fill="#fadcdc"/><text x="654" y="228" fill="#c0362c" font-size="11">blocked</text>
+
+    <rect x="28" y="250" width="744" height="42" rx="9" fill="#f5f7fc"/>
+    <rect x="42" y="263" width="16" height="16" rx="5" fill="#e6ecff"/>
+    <text x="70" y="276" fill="#0b0b28">model.summarize</text><text x="360" y="276" fill="#454a5e">1.9s</text><text x="500" y="276" fill="#454a5e">3,880</text>
+    <rect x="640" y="262" width="66" height="20" rx="10" fill="#e6ffef"/><text x="654" y="276" fill="#0a7a48" font-size="11">ok</text>
+
+    <rect x="28" y="298" width="744" height="42" rx="9" fill="#f5f7fc"/>
+    <rect x="42" y="311" width="16" height="16" rx="5" fill="#e6ecff"/>
+    <text x="70" y="324" fill="#0b0b28">tool.publish</text><text x="360" y="324" fill="#454a5e">140ms</text><text x="500" y="324" fill="#454a5e">—</text>
+    <rect x="640" y="310" width="66" height="20" rx="10" fill="#e6ffef"/><text x="654" y="324" fill="#0a7a48" font-size="11">ok</text>
+  </g>
+  <line x1="28" y1="356" x2="772" y2="356" stroke="#e2e6ef"/>
+  <text x="28" y="384" fill="#6b7089" font-size="12.5">5 spans . 1 blocked at the kernel . every span stamped and replayable</text>
+  <rect x="28" y="404" width="240" height="60" rx="12" fill="#f5f7fc" stroke="#e2e6ef"/>
+  <text x="46" y="430" fill="#7a7f92" font-size="10.5" font-family="'JetBrains Mono',monospace" letter-spacing="1">SIGNATURE</text>
+  <text x="46" y="450" fill="#2f4bd6" font-size="12" font-family="'JetBrains Mono',monospace">3f9a...c1  valid</text>
+  <rect x="284" y="404" width="240" height="60" rx="12" fill="#f5f7fc" stroke="#e2e6ef"/>
+  <text x="302" y="430" fill="#7a7f92" font-size="10.5" font-family="'JetBrains Mono',monospace" letter-spacing="1">EXPORT</text>
+  <text x="302" y="450" fill="#0b0b28" font-size="12">OpenTelemetry . SIEM</text>
+</svg>

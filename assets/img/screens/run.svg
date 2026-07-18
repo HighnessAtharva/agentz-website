@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'General Sans',system-ui,sans-serif">
+  <rect width="800" height="500" rx="14" fill="#ffffff"/>
+  <rect x="0" y="0" width="800" height="52" rx="14" fill="#f5f7fc"/>
+  <rect x="0" y="38" width="800" height="14" fill="#f5f7fc"/>
+  <rect x="24" y="18" width="16" height="16" rx="5" fill="#2f4bd6"/>
+  <text x="50" y="31" fill="#0b0b28" font-size="14" font-weight="600">Run console</text>
+  <rect x="632" y="14" width="144" height="24" rx="12" fill="#e6ffef"/>
+  <circle cx="650" cy="26" r="4" fill="#12b76a"/><text x="662" y="30" fill="#0a7a48" font-size="11.5" font-weight="600" font-family="'JetBrains Mono',monospace">running</text>
+  <!-- run stream -->
+  <text x="28" y="90" fill="#7a7f92" font-size="11" font-family="'JetBrains Mono',monospace" letter-spacing="1">TRIGGERED FROM CHAT</text>
+  <rect x="360" y="104" width="412" height="44" rx="14" fill="#e6ecff"/>
+  <text x="380" y="124" fill="#1b2a6b" font-size="12.5">Run the digest now and schedule it daily</text>
+  <text x="380" y="141" fill="#1b2a6b" font-size="12.5">at 12:30am.</text>
+  <!-- agent steps -->
+  <g font-family="'JetBrains Mono',monospace" font-size="12">
+    <rect x="28" y="168" width="744" height="34" rx="9" fill="#f5f7fc"/>
+    <circle cx="46" cy="185" r="4" fill="#2f4bd6"/><text x="62" y="190" fill="#0b0b28">plan.decompose</text><text x="660" y="190" fill="#7a7f92">240ms</text>
+    <rect x="28" y="208" width="744" height="34" rx="9" fill="#f5f7fc"/>
+    <circle cx="46" cy="225" r="4" fill="#2f4bd6"/><text x="62" y="230" fill="#0b0b28">tool.http_get  x4</text><text x="660" y="230" fill="#7a7f92">1.3s</text>
+    <rect x="28" y="248" width="744" height="34" rx="9" fill="#f5f7fc"/>
+    <circle cx="46" cy="265" r="4" fill="#2f4bd6"/><text x="62" y="270" fill="#0b0b28">model.summarize</text><text x="660" y="270" fill="#7a7f92">1.9s</text>
+    <rect x="28" y="288" width="744" height="34" rx="9" fill="#eef8f1"/>
+    <path d="M42 305l4 4 8-8" stroke="#12b76a" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="62" y="310" fill="#0b0b28">tool.publish  slack</text><text x="640" y="310" fill="#0a7a48">delivered</text>
+  </g>
+  <!-- schedule confirm -->
+  <rect x="28" y="336" width="744" height="72" rx="12" fill="#ffffff" stroke="#dfe4f0"/>
+  <rect x="44" y="352" width="30" height="30" rx="8" fill="#e6ecff"/><path d="M59 360v7l4 3" stroke="#2f4bd6" stroke-width="1.8" fill="none" stroke-linecap="round"/><circle cx="59" cy="367" r="9" fill="none" stroke="#2f4bd6" stroke-width="1.8"/>
+  <text x="90" y="366" fill="#0b0b28" font-size="13" font-weight="600">Schedule set</text>
+  <text x="90" y="386" fill="#6b7089" font-size="12">cron 0 30 0 * * *  .  next run in 14h  .  no redeploy</text>
+  <!-- composer -->
+  <rect x="28" y="424" width="744" height="46" rx="12" fill="#f5f7fc" stroke="#e2e6ef"/>
+  <text x="46" y="452" fill="#9a9fb2" font-size="13">Ask AgentZ to run, edit or schedule...</text>
+  <rect x="720" y="432" width="40" height="30" rx="9" fill="#2f4bd6"/><path d="M734 447h14m0 0l-5-5m5 5l-5 5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

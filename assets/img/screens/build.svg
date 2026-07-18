@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'General Sans',system-ui,sans-serif">
+  <rect width="800" height="500" rx="14" fill="#ffffff"/>
+  <!-- top bar -->
+  <rect x="0" y="0" width="800" height="52" rx="14" fill="#f5f7fc"/>
+  <rect x="0" y="38" width="800" height="14" fill="#f5f7fc"/>
+  <rect x="24" y="18" width="16" height="16" rx="5" fill="#2f4bd6"/>
+  <text x="50" y="31" fill="#0b0b28" font-size="14" font-weight="600">Compose a skill</text>
+  <rect x="628" y="14" width="148" height="24" rx="12" fill="#e6ecff"/>
+  <text x="646" y="30" fill="#2f4bd6" font-size="11.5" font-weight="600" font-family="'JetBrains Mono',monospace">draft . versioned</text>
+  <!-- left rail -->
+  <rect x="0" y="52" width="188" height="448" fill="#fafbfe"/>
+  <line x1="188" y1="52" x2="188" y2="500" stroke="#e2e6ef"/>
+  <text x="24" y="92" fill="#7a7f92" font-size="11" font-family="'JetBrains Mono',monospace" letter-spacing="1">STEPS</text>
+  <rect x="16" y="104" width="156" height="34" rx="9" fill="#e6ecff"/>
+  <circle cx="34" cy="121" r="4" fill="#2f4bd6"/><text x="48" y="126" fill="#2f4bd6" font-size="12.5" font-weight="600">Collect</text>
+  <text x="48" y="164" fill="#454a5e" font-size="12.5">Summarize</text>
+  <text x="48" y="200" fill="#454a5e" font-size="12.5">Publish</text>
+  <text x="24" y="440" fill="#7a7f92" font-size="11" font-family="'JetBrains Mono',monospace" letter-spacing="1">INPUTS</text>
+  <text x="24" y="464" fill="#454a5e" font-size="12">4 templated</text>
+  <!-- canvas nodes -->
+  <line x1="330" y1="150" x2="380" y2="150" stroke="#2f4bd6" stroke-width="2"/>
+  <line x1="560" y1="150" x2="610" y2="150" stroke="#2f4bd6" stroke-width="2"/>
+  <rect x="228" y="112" width="102" height="76" rx="12" fill="#ffffff" stroke="#dfe4f0"/>
+  <rect x="242" y="126" width="26" height="26" rx="7" fill="#e6ecff"/><rect x="249" y="133" width="12" height="12" rx="3" fill="none" stroke="#2f4bd6" stroke-width="1.6"/>
+  <text x="242" y="172" fill="#0b0b28" font-size="12" font-weight="600">Collect</text>
+  <rect x="382" y="112" width="178" height="76" rx="12" fill="#ffffff" stroke="#dfe4f0"/>
+  <rect x="396" y="126" width="26" height="26" rx="7" fill="#e6ecff"/><text x="402" y="144" fill="#2f4bd6" font-size="14" font-weight="700">S</text>
+  <text x="396" y="172" fill="#0b0b28" font-size="12" font-weight="600">Summarize</text>
+  <rect x="612" y="112" width="150" height="76" rx="12" fill="#ffffff" stroke="#dfe4f0"/>
+  <rect x="626" y="126" width="26" height="26" rx="7" fill="#eef1f7"/><path d="M633 145l8-8m0 0h-6m6 0v6" stroke="#0b0b28" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+  <text x="626" y="172" fill="#0b0b28" font-size="12" font-weight="600">Publish</text>
+  <!-- compose bar -->
+  <rect x="228" y="228" width="534" height="240" rx="14" fill="#f5f7fc" stroke="#e2e6ef"/>
+  <text x="248" y="258" fill="#7a7f92" font-size="11" font-family="'JetBrains Mono',monospace" letter-spacing="1">DESCRIBE THE JOB</text>
+  <rect x="248" y="272" width="494" height="42" rx="10" fill="#ffffff" stroke="#dfe4f0"/>
+  <text x="264" y="298" fill="#0b0b28" font-size="13">Summarize new competitor pages and post a weekly digest.</text>
+  <rect x="248" y="330" width="150" height="26" rx="13" fill="#e6ecff"/><text x="266" y="347" fill="#2f4bd6" font-size="11.5" font-weight="600" font-family="'JetBrains Mono',monospace">skill written</text>
+  <rect x="408" y="330" width="150" height="26" rx="13" fill="#eef1f7"/><text x="426" y="347" fill="#454a5e" font-size="11.5" font-family="'JetBrains Mono',monospace">3 steps wired</text>
+  <rect x="248" y="372" width="494" height="1" fill="#e2e6ef"/>
+  <text x="248" y="402" fill="#454a5e" font-size="12.5">Each step carries a goal and a done-check. Inputs stay templated.</text>
+  <rect x="248" y="420" width="120" height="34" rx="9" fill="#2f4bd6"/><text x="278" y="442" fill="#fff" font-size="12.5" font-weight="600">Save skill</text>
+</svg>
