@@ -140,33 +140,37 @@
 <!-- ══════════════════ BUILD · RUN · GOVERN (scroll stepper) ══════════════════ -->
 <section class="stepper" id="brg">
   <div class="stepper-sticky">
-    <div class="wrap stepper-grid">
-      <div class="stepper-left">
-        <div class="step-words">
-          <div class="step-word is-on" data-step="0">
+    <div class="wrap steps-wrap">
+      <div class="steps">
+        <article class="step is-on" data-step="0">
+          <div class="step-copy">
+            <span class="step-kicker">01 / 03</span>
             <h2>Build</h2>
             <p>Describe the job in a sentence. AgentZ writes the skill and wires every step.</p>
           </div>
-          <div class="step-word" data-step="1">
+          <div class="step-media"><img src="assets/img/screens/build.svg" alt="Build: compose a skill from one sentence (placeholder screenshot)"></div>
+        </article>
+        <article class="step" data-step="1">
+          <div class="step-copy">
+            <span class="step-kicker">02 / 03</span>
             <h2>Run</h2>
             <p>Chat, API, CLI, or a schedule. Any framework, any model, no redeploy.</p>
           </div>
-          <div class="step-word" data-step="2">
+          <div class="step-media"><img src="assets/img/screens/run.svg" alt="Run: trigger and schedule agents from chat (placeholder screenshot)"></div>
+        </article>
+        <article class="step" data-step="2">
+          <div class="step-copy">
+            <span class="step-kicker">03 / 03</span>
             <h2>Govern</h2>
             <p>Resolved at the edge, checked at the kernel, stamped to a signed trace.</p>
           </div>
-        </div>
-        <div class="step-dots">
-          <button class="step-dot is-on" data-go="0"><span>01</span> Build</button>
-          <button class="step-dot" data-go="1"><span>02</span> Run</button>
-          <button class="step-dot" data-go="2"><span>03</span> Govern</button>
-        </div>
+          <div class="step-media"><img src="assets/img/screens/govern.svg" alt="Govern: signed, replayable traces (placeholder screenshot)"></div>
+        </article>
       </div>
-      <div class="stepper-right">
-        <div class="step-screen is-on" data-screen="0"><img src="assets/img/screens/build.svg" alt="Build: compose a skill from one sentence (placeholder screenshot)"></div>
-        <div class="step-screen" data-screen="1"><img src="assets/img/screens/run.svg" alt="Run: trigger and schedule agents from chat (placeholder screenshot)"></div>
-        <div class="step-screen" data-screen="2"><img src="assets/img/screens/govern.svg" alt="Govern: signed, replayable traces (placeholder screenshot)"></div>
-        <span class="screen-tag">Placeholder · drop your product screenshot here</span>
+      <div class="step-dots">
+        <button class="step-dot is-on" data-go="0"><span>01</span> Build</button>
+        <button class="step-dot" data-go="1"><span>02</span> Run</button>
+        <button class="step-dot" data-go="2"><span>03</span> Govern</button>
       </div>
     </div>
   </div>

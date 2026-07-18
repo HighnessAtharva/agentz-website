@@ -24,16 +24,14 @@ document.querySelectorAll('.ph-hero,.arch-frame,.arch-rail,.ncard,.dcard,.dmn,.c
 
 /* ── Build · Run · Govern scroll stepper ── */
 const stepper = document.querySelector('.stepper');
-const words = [...document.querySelectorAll('.step-word')];
-const screens = [...document.querySelectorAll('.step-screen')];
+const steps = [...document.querySelectorAll('.step')];
 const dots = [...document.querySelectorAll('.step-dot')];
 let curStep = -1;
 
 function setStep(i) {
   if (i === curStep) return;
   curStep = i;
-  words.forEach((w) => w.classList.toggle('is-on', +w.dataset.step === i));
-  screens.forEach((s) => s.classList.toggle('is-on', +s.dataset.screen === i));
+  steps.forEach((s) => s.classList.toggle('is-on', +s.dataset.step === i));
   dots.forEach((d) => d.classList.toggle('is-on', +d.dataset.go === i));
 }
 
