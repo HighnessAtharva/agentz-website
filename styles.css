@@ -481,8 +481,39 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.05;font-weight:600}
    STATEMENT BAND + section subheading
    ══════════════════════════════════════════════ */
 .section-sub{margin-top:16px;font-size:clamp(17px,2vw,22px);color:var(--ink-soft);max-width:42ch;line-height:1.4}
-.statement{background:var(--navy);color:#fff;padding:clamp(90px,16vh,180px) 0;text-align:center;
-  background-image:radial-gradient(120% 90% at 50% 18%,rgba(47,75,214,.32),transparent 60%)}
-.statement-h{font-size:clamp(38px,6.5vw,92px);font-weight:700;letter-spacing:-.035em;line-height:1.02;
-  color:#fff;max-width:16ch;margin:0 auto}
-.statement-h .ital{color:var(--blue-bright)}
+.statement{position:relative;overflow:hidden;background:var(--navy);color:#fff;text-align:center;
+  padding:clamp(120px,20vh,240px) 0;
+  background-image:radial-gradient(120% 90% at 50% 20%,rgba(47,75,214,.34),transparent 60%)}
+.statement-inner{position:relative;z-index:2}
+.statement-h{margin:0 auto;color:#fff;font-weight:700;letter-spacing:-.035em;line-height:1.08}
+.sh-line{display:block;width:fit-content;max-width:100%;margin-inline:auto;white-space:nowrap;font-size:clamp(30px,5.2vw,68px)}
+.sh-line.ital{color:var(--blue-bright);margin-top:2px}
+.statement-sub{margin-top:26px;font-family:var(--mono);font-size:clamp(14px,1.7vw,19px);
+  letter-spacing:.05em;color:rgba(255,255,255,.7);white-space:nowrap}
+
+/* left arc of AI icons, right arc of security icons */
+.arc{position:absolute;inset:0;z-index:1;pointer-events:none}
+.arc-ico{position:absolute;width:54px;height:54px;border-radius:15px;display:grid;place-items:center;
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16)}
+.arc-ico .ico{width:26px;height:26px;color:#fff}
+.arc-l .arc-ico:nth-child(1){top:9%;left:15%}
+.arc-l .arc-ico:nth-child(2){top:28%;left:6%}
+.arc-l .arc-ico:nth-child(3){top:49%;left:2.5%}
+.arc-l .arc-ico:nth-child(4){top:70%;left:6%}
+.arc-l .arc-ico:nth-child(5){top:89%;left:15%}
+.arc-r .arc-ico:nth-child(1){top:9%;right:15%}
+.arc-r .arc-ico:nth-child(2){top:28%;right:6%}
+.arc-r .arc-ico:nth-child(3){top:49%;right:2.5%}
+.arc-r .arc-ico:nth-child(4){top:70%;right:6%}
+.arc-r .arc-ico:nth-child(5){top:89%;right:15%}
+@media(max-width:1000px){
+  .arc-ico{width:44px;height:44px}
+  .arc-ico .ico{width:22px;height:22px}
+  .arc-l .arc-ico:nth-child(1),.arc-l .arc-ico:nth-child(5){left:5%}
+  .arc-r .arc-ico:nth-child(1),.arc-r .arc-ico:nth-child(5){right:5%}
+}
+@media(max-width:680px){
+  .arc{display:none}
+  .sh-line{white-space:normal;font-size:clamp(30px,8vw,44px)}
+  .statement-sub{white-space:normal}
+}
