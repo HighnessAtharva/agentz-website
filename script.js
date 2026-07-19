@@ -14,7 +14,7 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.12 });
-document.querySelectorAll('.ph-hero,.arch-frame,.arch-rail,.ncard,.dcard,.dmn,.org-canvas,.control-copy,.control-card,.video-card,.runtime-copy,.runtime-media')
+document.querySelectorAll('.ph-hero,.arch-frame,.arch-rail,.flow,.ncard,.dcard,.dmn,.org-canvas,.control-copy,.control-card,.video-card,.screen-card,.integ-logos,.runtime-copy,.runtime-media')
   .forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -75,12 +75,12 @@ window.addEventListener('resize', onScroll);
 stepperProgress();
 progress();
 
-/* ── video carousel (prev / next) ── */
-const track = document.getElementById('vid-track');
-if (track) {
-  const arrows = [...document.querySelectorAll('.vid-arrow')];
+/* ── carousels (video + product screens): prev / next ── */
+document.querySelectorAll('.vid-track').forEach((track) => {
+  const section = track.closest('section');
+  const arrows = section ? [...section.querySelectorAll('.vid-arrow')] : [];
   const stepBy = () => {
-    const card = track.querySelector('.video-card');
+    const card = track.firstElementChild;
     return card ? card.getBoundingClientRect().width + 22 : 320;
   };
   arrows.forEach((a) => a.addEventListener('click', () => {
@@ -95,4 +95,4 @@ if (track) {
   track.addEventListener('scroll', updateArrows, { passive: true });
   window.addEventListener('resize', updateArrows);
   updateArrows();
-}
+});

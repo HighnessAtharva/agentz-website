@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=35" />
+<link rel="stylesheet" href="styles.css?v=36" />
 </head>
 <body>
 
@@ -59,6 +59,22 @@
 
 <!-- ══════════════════ HERO ══════════════════ -->
 <section class="hero">
+  <div class="arc arc-hero arc-l" aria-hidden="true">
+    <span class="arc-ico"><svg class="ico"><use href="#i-claude"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-openai"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-gemini"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-skills"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-guardrails"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-shield"/></svg></span>
+  </div>
+  <div class="arc arc-hero arc-r" aria-hidden="true">
+    <span class="arc-ico"><svg class="ico"><use href="#i-workflows"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-context"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-teams"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-lock"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-key"/></svg></span>
+    <span class="arc-ico"><svg class="ico"><use href="#i-audit"/></svg></span>
+  </div>
   <div class="wrap hero-inner">
     <a class="brandby" href="https://accuknox.com" target="_blank" rel="noopener">
       <span>Built by</span><img src="assets/img/accuknox-logo.png" alt="AccuKnox" width="118" height="28">
@@ -123,6 +139,12 @@
         </div>
       </div>
     </div>
+    <figure class="flow">
+      <figcaption class="flow-cap"><span class="section-eyebrow">The full picture</span>Intent in, governed action out.</figcaption>
+      <div class="flow-frame">
+        <img src="assets/img/flow-diagram.jpeg" alt="How work flows through AgentZ: intent from chat, API, CLI or a schedule into AgentZ (skills, workflows, context, guardrails) across the policy edge to tools and models, with observability, audit and trace underneath">
+      </div>
+    </figure>
   </div>
 </section>
 
@@ -302,7 +324,6 @@
         <div class="cc-actions"><span class="cc-btn cc-btn-primary">Archive instead</span><span class="cc-btn">Delete anyway</span></div>
       </div></div>
       <div class="cc-msg"><span class="cc-av">SB</span><div><b>Sam Bauer</b><p>good catch. archive it.</p></div></div>
-      <div class="cc-foot"><svg class="ico ico-sm"><use href="#i-guardrails"/></svg> Trusted and secured · CCPA · GDPR · SOC 2</div>
     </div>
   </div>
 </section>
@@ -335,13 +356,13 @@
 <!-- ══════════════════ MID-PAGE CTA BANNER ══════════════════ -->
 <section class="cta-banner">
   <div class="wrap">
-    <div class="cta-inner">
+    <div class="cta-inner cta-dark">
       <div class="cta-copy">
         <h2>Put your first agent in production.</h2>
         <p>Start with one skill. Bring your own model. Keep security underneath, from the very first run.</p>
-        <a class="btn btn-primary btn-lg" href="#waitlist" data-tally-open="RGlZ1l" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the waitlist</a>
+        <a class="btn btn-light btn-lg" href="#waitlist" data-tally-open="RGlZ1l" data-tally-layout="modal" data-tally-width="540" data-tally-overlay="1" data-tally-emoji-text="👋" data-tally-emoji-animation="wave">Join the waitlist</a>
       </div>
-      <div class="cta-art ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Illustration · 1200 × 900</span></div>
+      <div class="cta-art"><img src="assets/img/scenes/robot.png" alt="An agent moving fast, governed by default"></div>
     </div>
   </div>
 </section>
@@ -388,16 +409,9 @@
     <p class="integ-sub">Connect tools, data and models. Bring your own agent framework. AgentZ governs them all through one policy edge.</p>
   </div>
   <div class="wrap">
-    <div class="integ-grid">
-      <span class="integ-tile"><svg class="ico"><use href="#i-workflows"/></svg>Slack</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-files"/></svg>Notion</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-audit"/></svg>GitHub</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-receipt"/></svg>Jira</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-eye"/></svg>OpenTelemetry</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-mcp"/></svg>MCP</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-database"/></svg>Databases</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-api"/></svg>SaaS APIs</span>
-    </div>
+    <figure class="integ-logos">
+      <img src="assets/img/logos.png" alt="Works with OpenAI, Anthropic, Gemini, KubeArmor, OpenBao, OpenTelemetry, Sigstore, Kubernetes, Slack, Jira, Notion, GitHub and MCP">
+    </figure>
     <div class="integ-partners">
       <span class="partner-label">And your agent framework</span>
       <div class="partner-row">
@@ -409,7 +423,6 @@
         <span class="partner"><svg class="ico"><use href="#i-model"/></svg>Llama</span>
       </div>
     </div>
-    <div class="ph ph-hero integ-shot"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Integrations overview · 1600 × 900</span></div>
   </div>
 </section>
 
@@ -459,6 +472,29 @@
   </div>
 </section>
 
+<!-- ══════════════════ PRODUCT SCREENS (carousel) ══════════════════ -->
+<section class="screens" id="screens">
+  <div class="wrap">
+    <div class="vid-head">
+      <div>
+        <p class="section-eyebrow">Inside the product</p>
+        <h2 class="section-h2">A look at AgentZ.</h2>
+      </div>
+      <div class="vid-nav">
+        <button class="vid-arrow" data-dir="-1" aria-label="Previous"><svg class="ico"><use href="#i-chev"/></svg></button>
+        <button class="vid-arrow" data-dir="1" aria-label="Next"><svg class="ico"><use href="#i-chev"/></svg></button>
+      </div>
+    </div>
+    <div class="vid-track" id="screens-track">
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/workflow.png" alt="Edit a workflow and set a schedule from chat"></span><figcaption><b>Workflows in chat</b><span>Edit steps and set a schedule in plain language.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/chat.png" alt="Talk to your agent"></span><figcaption><b>Conversational ops</b><span>Ask, and the agent builds, edits and runs.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/span-error.png" alt="Span detail with token breakdown"></span><figcaption><b>Signed traces</b><span>Read every span, down to the token.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/network.png" alt="Network egress allowed or blocked at the kernel"></span><figcaption><b>Policy edge</b><span>Every egress allowed or blocked at the kernel.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/environment.png" alt="A signed environment"></span><figcaption><b>Environments</b><span>Identity, packages and tools in one signed object.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ FOOTER ══════════════════ -->
 <footer class="footer">
   <div class="wrap foot-top">
@@ -475,6 +511,6 @@
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=35"></script>
+<script src="script.js?v=36"></script>
 </body>
 </html>
