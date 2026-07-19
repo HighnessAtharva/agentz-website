@@ -14,7 +14,7 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.12 });
-document.querySelectorAll('.ph-hero,.arch-frame,.arch-rail,.ncard,.dcard,.dmn,.control-copy,.control-card,.video-card,.runtime-copy,.runtime-media')
+document.querySelectorAll('.ph-hero,.arch-frame,.arch-rail,.ncard,.dcard,.dmn,.org-canvas,.control-copy,.control-card,.video-card,.runtime-copy,.runtime-media')
   .forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';

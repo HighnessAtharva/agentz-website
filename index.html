@@ -214,6 +214,73 @@
   </div>
 </section>
 
+<!-- ══════════════════ ORGANIZATION SAFETY (RBAC tree) ══════════════════ -->
+<section class="org" id="governance">
+  <div class="wrap">
+    <div class="org-head">
+      <div>
+        <p class="section-eyebrow">Organization safety</p>
+        <h2 class="section-h2 org-h">Your whole org, <span class="ital">governed by default</span>.</h2>
+      </div>
+      <p class="org-lead">Admins set roles, provision credentials and environments, and wire workflows for the team. People request the exact access they need. Fine-grained RBAC gates every agent action, and a full trace log records all of it. Governance is solved on step one, so your team builds at light speed.</p>
+    </div>
+
+    <div class="org-canvas">
+      <div class="org-canvas-head">
+        <span class="occ-title"><span class="occ-dot"></span>acme-corp workspace</span>
+        <span class="occ-meta">RBAC · sandboxed · fully traced</span>
+      </div>
+
+      <div class="tree">
+        <ul>
+          <li>
+            <div class="node node-admin">
+              <span class="node-ico"><svg class="ico"><use href="#i-guardrails"/></svg></span>
+              <div class="node-body">
+                <b>Admin</b>
+                <span>Sets roles. Provisions on behalf of the team.</span>
+              </div>
+              <div class="node-tags">
+                <span class="ntag"><svg class="ico ico-sm"><use href="#i-key"/></svg>credentials</span>
+                <span class="ntag"><svg class="ico ico-sm"><use href="#i-context"/></svg>environments</span>
+                <span class="ntag"><svg class="ico ico-sm"><use href="#i-workflows"/></svg>workflows</span>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <div class="node node-role"><span class="role-dot d-a"></span><b>Security</b><span class="node-perm">run · read · quarantine</span></div>
+                <ul>
+                  <li><div class="uchip"><span class="ava">AN</span>Ana</div></li>
+                  <li><div class="uchip"><span class="ava">BE</span>Ben</div></li>
+                </ul>
+              </li>
+              <li>
+                <div class="node node-role"><span class="role-dot d-b"></span><b>DevOps</b><span class="node-perm">deploy · rollback</span></div>
+                <ul>
+                  <li><div class="uchip"><span class="ava">CA</span>Cara</div></li>
+                  <li><div class="uchip uchip-req"><span class="ava">DV</span>Dev<span class="req-pill">requests prod access</span></div></li>
+                </ul>
+              </li>
+              <li>
+                <div class="node node-role"><span class="role-dot d-c"></span><b>Data</b><span class="node-perm">query · export</span></div>
+                <ul>
+                  <li><div class="uchip"><span class="ava">EV</span>Eve</div></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="org-facts">
+        <div class="ofact"><span class="ofact-ico"><svg class="ico"><use href="#i-shield"/></svg></span><div><b>Fine-grained RBAC</b><span>Roles gate every agent action, down to the tool call.</span></div></div>
+        <div class="ofact"><span class="ofact-ico"><svg class="ico"><use href="#i-audit"/></svg></span><div><b>Full trace log</b><span>Every action lands in a signed, replayable record.</span></div></div>
+        <div class="ofact"><span class="ofact-ico"><svg class="ico"><use href="#i-eye"/></svg></span><div><b>Browser sandbox</b><span>Agents run in an isolated, governed workspace.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ CONTROL (split copy + gradient card) ══════════════════ -->
 <section class="control" id="control">
   <div class="wrap control-grid">
@@ -326,10 +393,6 @@
       <span class="integ-tile"><svg class="ico"><use href="#i-files"/></svg>Notion</span>
       <span class="integ-tile"><svg class="ico"><use href="#i-audit"/></svg>GitHub</span>
       <span class="integ-tile"><svg class="ico"><use href="#i-receipt"/></svg>Jira</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-server"/></svg>Kubernetes</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-guardrails"/></svg>KubeArmor</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-key"/></svg>OpenBao</span>
-      <span class="integ-tile"><svg class="ico"><use href="#i-audit"/></svg>Sigstore</span>
       <span class="integ-tile"><svg class="ico"><use href="#i-eye"/></svg>OpenTelemetry</span>
       <span class="integ-tile"><svg class="ico"><use href="#i-mcp"/></svg>MCP</span>
       <span class="integ-tile"><svg class="ico"><use href="#i-database"/></svg>Databases</span>
