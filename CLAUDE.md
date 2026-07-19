@@ -18,6 +18,13 @@ Bold and typographic. Blue system: deep navy `#000025` (brand, dark zones, prima
 
 Icons come from the inline SVG sprite at the top of `index.html` (`<use href="#i-...">`), styled with `currentColor`. Add new icons there, never re-import a separate icon set. Image placeholders use the `.ph` component (dashed border, mono label) so slots are obviously swappable.
 
+## Approved taglines
+
+Use these three as big headings only, never in the hero, never shrunk to small labels:
+- "Zero Trust. Full Autonomy." (platform section)
+- "Govern every agent. Trust none by default." (control section)
+- "Powered by Agentic AI. Protected by Zero Trust." (statement band)
+
 ## Copy
 
-No em dashes. Direct, specific, no filler.
+No em dashes. Direct, specific, no filler. Two CTAs only, pill-shaped: "Join the waitlist" (Tally modal `RGlZ1l`) and "See the platform" pointing at `https://accuknox.com/demo`. B2B PLG, so no "no credit card required" line. All product screenshots are `.ph` placeholders at **16:9** that fit their container exactly. Do not generate fake product screenshots. No decorative page-edge tapes or barricades.
