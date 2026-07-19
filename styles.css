@@ -389,6 +389,12 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.05;font-weight:600}
 .ph-hero{aspect-ratio:16/8.5;min-height:340px;border-radius:24px}
 .ph-hero .ph-ico .ico{width:32px;height:32px}
 .ph-hero .ph-label{font-size:13px}
+/* 16:9 placeholder inside the three-pillar cards */
+.ncard-ph{margin-top:22px;aspect-ratio:16/9;min-height:0;border-radius:12px}
+.ncard-ph .ph-ico .ico{width:22px;height:22px}
+.ncard-ph .ph-label{font-size:11.5px}
+/* big integrations overview placeholder */
+.integ-shot{margin-top:56px}
 
 /* video header — single heading line + subtitle */
 .vid-title{max-width:none;line-height:1.02}
