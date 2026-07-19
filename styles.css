@@ -663,6 +663,11 @@ h1,h2,h3{letter-spacing:-.025em;line-height:1.05;font-weight:600}
 .screen-card figcaption b{display:block;font-size:16.5px;color:var(--ink)}
 .screen-card figcaption span{font-size:13.5px;color:var(--ink-soft)}
 
+/* pillars heading + lead to two lines; screens section rhythm */
+#pillars .fhead-h{max-width:26ch}
+#pillars .fhead-p{max-width:70ch}
+.screens{background:var(--paper)}
+
 /* depth polish: subtle gradients on a few light sections */
 .arch{background:radial-gradient(120% 66% at 50% -8%,#eaeefb 0%,var(--paper) 52%)}
 .integ{background:radial-gradient(110% 60% at 50% 0%,#eaeefb 0%,var(--paper-2) 55%)}

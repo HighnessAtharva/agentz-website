@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=36" />
+<link rel="stylesheet" href="styles.css?v=37" />
 </head>
 <body>
 
@@ -140,7 +140,7 @@
       </div>
     </div>
     <figure class="flow">
-      <figcaption class="flow-cap"><span class="section-eyebrow">The full picture</span>Intent in, governed action out.</figcaption>
+      <figcaption class="flow-cap"><span class="section-eyebrow">Tools and models</span>Complete support for every tool and model, with usage policies on by default.</figcaption>
       <div class="flow-frame">
         <img src="assets/img/flow-diagram.jpeg" alt="How work flows through AgentZ: intent from chat, API, CLI or a schedule into AgentZ (skills, workflows, context, guardrails) across the policy edge to tools and models, with observability, audit and trace underneath">
       </div>
@@ -153,7 +153,7 @@
   <div class="wrap">
     <div class="fhead">
       <h2 class="fhead-h">A platform for the agents <span class="hl hl-a">your teams already want to build</span>.</h2>
-      <p class="fhead-p">Compose <span class="hl hl-a">skills</span>, wire them into <span class="hl hl-b">workflows</span>, and roll them out across your <span class="hl hl-c">organization</span>. Bring any model or framework. Security stays underneath, so you focus on what the agents actually do.</p>
+      <p class="fhead-p">Compose <span class="hl hl-a">skills</span>, wire them into <span class="hl hl-b">workflows</span>, and roll them out across your <span class="hl hl-c">organization</span>. Bring any model or framework, security stays underneath.</p>
     </div>
     <div class="ncards ncards-3">
       <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-skills"/></svg></span><span class="ncard-n">01</span></div><h3><span class="hl hl-a">Skill management</span></h3><p>Package capabilities as reusable skills. Versioned, testable, and shared across every agent your team runs.</p><div class="ph ncard-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 16:9</span></div></article>
@@ -202,6 +202,29 @@
   </div>
 </section>
 
+<!-- ══════════════════ PRODUCT SCREENS (carousel) ══════════════════ -->
+<section class="screens" id="screens">
+  <div class="wrap">
+    <div class="vid-head">
+      <div>
+        <p class="section-eyebrow">Inside the product</p>
+        <h2 class="section-h2">A look at AgentZ.</h2>
+      </div>
+      <div class="vid-nav">
+        <button class="vid-arrow" data-dir="-1" aria-label="Previous"><svg class="ico"><use href="#i-chev"/></svg></button>
+        <button class="vid-arrow" data-dir="1" aria-label="Next"><svg class="ico"><use href="#i-chev"/></svg></button>
+      </div>
+    </div>
+    <div class="vid-track" id="screens-track">
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/workflow.png" alt="Edit a workflow and set a schedule from chat"></span><figcaption><b>Workflows in chat</b><span>Edit steps and set a schedule in plain language.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/chat.png" alt="Talk to your agent"></span><figcaption><b>Conversational ops</b><span>Ask, and the agent builds, edits and runs.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/span-error.png" alt="Span detail with token breakdown"></span><figcaption><b>Signed traces</b><span>Read every span, down to the token.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/network.png" alt="Network egress allowed or blocked at the kernel"></span><figcaption><b>Policy edge</b><span>Every egress allowed or blocked at the kernel.</span></figcaption></figure>
+      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/environment.png" alt="A signed environment"></span><figcaption><b>Environments</b><span>Identity, packages and tools in one signed object.</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ SECURE BY DEFAULT (centered header + ghost-number cards) ══════════════════ -->
 <section class="feature alt" id="secure">
   <div class="wrap">
@@ -221,9 +244,8 @@
 <!-- ══════════════════ SIX DOMAINS (split header + hairline grid) ══════════════════ -->
 <section class="feature" id="domains">
   <div class="wrap">
-    <div class="fhead split">
-      <h2 class="fhead-h">Real work, left to run <span class="hl hl-b">on its own</span>.</h2>
-      <p class="fhead-p">The first agents in production are not doing science fiction. They are doing the spreadsheet, the ticket, the on-call page, the quarterly report. Boring, valuable, repeatable.</p>
+    <div class="fhead">
+      <h2 class="fhead-h">Point an agent at the <span class="hl hl-b">work you already do</span>.</h2>
     </div>
     <div class="dmn-grid">
       <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-server"/></svg></span><h3>IT and DevOps</h3></div><p>Triage alerts, run remediations, and automate routine ops on a schedule.</p></div>
@@ -472,29 +494,6 @@
   </div>
 </section>
 
-<!-- ══════════════════ PRODUCT SCREENS (carousel) ══════════════════ -->
-<section class="screens" id="screens">
-  <div class="wrap">
-    <div class="vid-head">
-      <div>
-        <p class="section-eyebrow">Inside the product</p>
-        <h2 class="section-h2">A look at AgentZ.</h2>
-      </div>
-      <div class="vid-nav">
-        <button class="vid-arrow" data-dir="-1" aria-label="Previous"><svg class="ico"><use href="#i-chev"/></svg></button>
-        <button class="vid-arrow" data-dir="1" aria-label="Next"><svg class="ico"><use href="#i-chev"/></svg></button>
-      </div>
-    </div>
-    <div class="vid-track" id="screens-track">
-      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/workflow.png" alt="Edit a workflow and set a schedule from chat"></span><figcaption><b>Workflows in chat</b><span>Edit steps and set a schedule in plain language.</span></figcaption></figure>
-      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/chat.png" alt="Talk to your agent"></span><figcaption><b>Conversational ops</b><span>Ask, and the agent builds, edits and runs.</span></figcaption></figure>
-      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/span-error.png" alt="Span detail with token breakdown"></span><figcaption><b>Signed traces</b><span>Read every span, down to the token.</span></figcaption></figure>
-      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/network.png" alt="Network egress allowed or blocked at the kernel"></span><figcaption><b>Policy edge</b><span>Every egress allowed or blocked at the kernel.</span></figcaption></figure>
-      <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/environment.png" alt="A signed environment"></span><figcaption><b>Environments</b><span>Identity, packages and tools in one signed object.</span></figcaption></figure>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════ FOOTER ══════════════════ -->
 <footer class="footer">
   <div class="wrap foot-top">
@@ -511,6 +510,6 @@
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=36"></script>
+<script src="script.js?v=37"></script>
 </body>
 </html>
