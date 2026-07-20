@@ -3,54 +3,65 @@
    ══════════════════════════════════════════════ */
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+/* Visibility is driven from the scroll loop, not IntersectionObserver. Several
+   embedded and in-app browsers deliver only the first observer callback and none
+   afterwards, which leaves observed content stuck invisible and clips stuck
+   paused. A viewport test on scroll costs almost nothing and always works. */
+const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+const near = (el, pad) => {
+  const r = el.getBoundingClientRect();
+  return r.height > 0 && r.top < window.innerHeight + (pad || 0) && r.bottom > -(pad || 0);
+};
+
 /* ── reveal on scroll ── */
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((en) => {
-    if (en.isIntersecting) {
-      en.target.style.opacity = '1';
-      en.target.style.transform = 'none';
-      io.unobserve(en.target);
-    }
+const revealEls = [...document.querySelectorAll('.ph-hero,.vw-hero,.arch-frame,.arch-rail,.flow,.ncard,.dcard,.dmn,.org-canvas,.control-copy,.control-card,.video-card,.screen-card,.integ-logos,.runtime-copy,.runtime-media')];
+revealEls.forEach((el, i) => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = `opacity .6s ease ${(i % 4) * 0.06}s, transform .6s ease ${(i % 4) * 0.06}s`;
+});
+let pendingReveal = revealEls.slice();
+function revealTick() {
+  if (!pendingReveal.length) return;
+  pendingReveal = pendingReveal.filter((el) => {
+    if (!near(el, -40)) return true;
+    show(el);
+    return false;
   });
-}, { threshold: 0.12 });
-document.querySelectorAll('.ph-hero,.vw-hero,.arch-frame,.arch-rail,.flow,.ncard,.dcard,.dmn,.org-canvas,.control-copy,.control-card,.video-card,.screen-card,.integ-logos,.runtime-copy,.runtime-media')
-  .forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = `opacity .6s ease ${(i % 4) * 0.06}s, transform .6s ease ${(i % 4) * 0.06}s`;
-    io.observe(el);
-  });
+}
 
-/* ── product clips: silent loops, only while on screen ── */
+/* ── product clips: silent loops, playing whenever they are on screen ── */
 const play = (v) => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
-
 const clips = [...document.querySelectorAll('.vw video')];
 clips.forEach((v) => { v.muted = true; });
-if (clips.length && !reduce) {
-  const vio = new IntersectionObserver((entries) => {
-    entries.forEach((en) => {
-      if (en.isIntersecting) play(en.target);
-      else if (!en.target.paused) en.target.pause();
-    });
-  }, { threshold: 0.25 });
-  clips.forEach((v) => vio.observe(v));
+/* Clips also carry the autoplay attribute, so they start even if no script runs.
+   Nothing is paused until the reader has actually scrolled, otherwise the first
+   tick would stop autoplay before it ever began. */
+let hasScrolled = false;
+function clipTick() {
+  clips.forEach((v) => {
+    if (near(v, 100)) { if (v.paused) play(v); }
+    else if (hasScrolled && !v.paused) v.pause();
+  });
 }
 
 /* ── Build · Run · Govern: stacked steps, each revealing as it scrolls in ── */
 const stepsRoot = document.querySelector('.steps');
 const steps = [...document.querySelectorAll('.step')];
+let pendingSteps = [];
 if (stepsRoot && steps.length && !reduce) {
   stepsRoot.classList.add('js-reveal');
-  const sio = new IntersectionObserver((entries) => {
-    entries.forEach((en) => {
-      if (!en.isIntersecting) return;
-      en.target.classList.add('is-on');
-      sio.unobserve(en.target);
-    });
-  }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
-  steps.forEach((s) => sio.observe(s));
+  pendingSteps = steps.slice();
 } else {
   steps.forEach((s) => s.classList.add('is-on'));
+}
+function stepTick() {
+  if (!pendingSteps.length) return;
+  pendingSteps = pendingSteps.filter((s) => {
+    if (!near(s, -60)) return true;
+    s.classList.add('is-on');
+    return false;
+  });
 }
 
 /* ── lightbox: click any product image or clip to open it full screen ── */
@@ -98,7 +109,7 @@ if (stepsRoot && steps.length && !reduce) {
       node.removeAttribute('poster');
       node.currentTime = src.currentTime || 0;
       stage.appendChild(node);
-      if (!reduce) play(node);
+      play(node);
     } else {
       node.removeAttribute('width');
       node.removeAttribute('height');
@@ -152,12 +163,37 @@ function onScroll() {
   if (ticking) return;
   ticking = true;
   requestAnimationFrame(() => {
+    revealTick();
+    stepTick();
+    clipTick();
     progress();
     ticking = false;
   });
 }
-window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('scroll', () => { hasScrolled = true; onScroll(); }, { passive: true });
 window.addEventListener('resize', onScroll);
+window.addEventListener('load', onScroll);
+
+/* Belt and braces. An observer drives the same ticks where it works, and a slow
+   poll covers browsers that deliver neither scroll events nor observer callbacks
+   (several in-app and embedded ones do exactly that). The poll drops itself as
+   soon as a real event proves the page has a working signal, or once everything
+   has been revealed. */
+let liveSignal = false;
+const gotSignal = () => { liveSignal = true; onScroll(); };
+window.addEventListener('scroll', gotSignal, { passive: true, once: true });
+if ('IntersectionObserver' in window) {
+  const tickIo = new IntersectionObserver(gotSignal, { threshold: [0, 0.15, 0.5] });
+  [...revealEls, ...clips].forEach((el) => tickIo.observe(el));
+}
+const poll = setInterval(() => {
+  revealTick(); stepTick(); clipTick(); progress();
+  if (liveSignal || (!pendingReveal.length && !pendingSteps.length)) clearInterval(poll);
+}, 400);
+
+revealTick();
+stepTick();
+clipTick();
 progress();
 
 /* ── carousels (video + product screens): prev / next ── */

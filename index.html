@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=42" />
+<link rel="stylesheet" href="styles.css?v=51" />
 </head>
 <body>
 
@@ -102,7 +102,7 @@
   <div class="wrap">
     <div class="vw vw-hero">
       <video src="assets/video/hero-workflow-graph.mp4" poster="assets/video/hero-workflow-graph.jpg"
-             muted loop playsinline preload="metadata"
+             autoplay muted loop playsinline preload="metadata"
              aria-label="A workflow running live in AgentZ, steps moving through running and succeeded"></video>
     </div>
   </div>
@@ -148,7 +148,7 @@
     <figure class="flow">
       <figcaption class="flow-cap"><span class="section-eyebrow">Tools and models</span>Complete support for every tool and model, with usage policies on by default.</figcaption>
       <div class="flow-frame">
-        <img src="assets/img/flow-diagram.jpeg" alt="How work flows through AgentZ: intent from chat, API, CLI or a schedule into AgentZ (skills, workflows, context, guardrails) across the policy edge to tools and models, with observability, audit and trace underneath">
+        <img src="assets/img/flow-diagram.png" alt="How work flows through AgentZ: intent from chat, API, CLI or a schedule into AgentZ (skills, workflows, context, guardrails) across the policy edge to tools and models, with observability, audit and trace underneath">
       </div>
     </figure>
   </div>
@@ -182,7 +182,7 @@
           </div>
           <div class="step-media"><div class="vw vw-dark vw-step">
             <video src="assets/video/build-create-agent.mp4" poster="assets/video/build-create-agent.jpg"
-                   muted loop playsinline preload="none"
+                   autoplay muted loop playsinline preload="metadata"
                    aria-label="Creating an agent in AgentZ: sandbox, skills, persistent memory and model provider"></video>
           </div></div>
         </article>
@@ -194,7 +194,7 @@
           </div>
           <div class="step-media"><div class="vw vw-dark vw-step">
             <video src="assets/video/run-chat-workflows.mp4" poster="assets/video/run-chat-workflows.jpg"
-                   muted loop playsinline preload="none"
+                   autoplay muted loop playsinline preload="metadata"
                    aria-label="Running workflows from chat in AgentZ, with the file explorer and run history open"></video>
           </div></div>
         </article>
@@ -206,7 +206,7 @@
           </div>
           <div class="step-media"><div class="vw vw-dark vw-step">
             <video src="assets/video/govern-sandbox-permissions.mp4" poster="assets/video/govern-sandbox-permissions.jpg"
-                   muted loop playsinline preload="none"
+                   autoplay muted loop playsinline preload="metadata"
                    aria-label="Scoping a sandbox in AgentZ down to per-tool permissions and allowed hosts"></video>
           </div></div>
         </article>
@@ -414,9 +414,9 @@
       </div>
     </div>
     <div class="vid-track" id="vid-track">
-      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-mcp-connect.mp4" poster="assets/video/card-mcp-connect.jpg" muted loop playsinline preload="none" aria-label="Connecting an MCP server in AgentZ"></video></div><b>Connect an MCP server</b><p>Pick a provider, authorize, watch it go Ready.</p></a>
-      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-schedule-cron.mp4" poster="assets/video/card-schedule-cron.jpg" muted loop playsinline preload="none" aria-label="Editing a cron schedule in AgentZ"></video></div><b>Schedule an agent</b><p>Set a cron, edit the schedule in place, no redeploy.</p></a>
-      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Read a signed trace</b><p>Inspect every span, down to the token.</p></a>
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-mcp-connect.mp4" poster="assets/video/card-mcp-connect.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Connecting an MCP server in AgentZ"></video></div><b>Connect an MCP server</b><p>Pick a provider, authorize, watch it go Ready.</p></a>
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-schedule-cron.mp4" poster="assets/video/card-schedule-cron.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Editing a cron schedule in AgentZ"></video></div><b>Schedule an agent</b><p>Set a cron, edit the schedule in place, no redeploy.</p></a>
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-signed-trace.mp4" poster="assets/video/card-signed-trace.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Reading a signed trace in AgentZ: span tree, per-call durations and token counts"></video></div><b>Read a signed trace</b><p>Inspect every span, down to the token.</p></a>
       <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Guard a response</b><p>Run over real tools with policy at the edge.</p></a>
     </div>
   </div>
@@ -434,7 +434,7 @@
     <div class="runtime-media">
       <div class="vw vw-wide">
         <video src="assets/video/runtime-traces-telemetry.mp4" poster="assets/video/runtime-traces-telemetry.jpg"
-               muted loop playsinline preload="none"
+               autoplay muted loop playsinline preload="metadata"
                aria-label="Reading a signed trace in AgentZ: span tree, durations, token counts and network events"></video>
       </div>
     </div>
@@ -528,6 +528,6 @@
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=42"></script>
+<script src="script.js?v=51"></script>
 </body>
 </html>
