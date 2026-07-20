@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=51" />
+<link rel="stylesheet" href="styles.css?v=52" />
 </head>
 <body>
 
@@ -154,21 +154,6 @@
   </div>
 </section>
 
-<!-- ══════════════════ THREE PILLARS (left header + cards) ══════════════════ -->
-<section class="feature" id="pillars">
-  <div class="wrap">
-    <div class="fhead">
-      <h2 class="fhead-h">A platform for the agents <span class="hl hl-a">your teams already want to build</span>.</h2>
-      <p class="fhead-p">Compose <span class="hl hl-a">skills</span>, wire them into <span class="hl hl-b">workflows</span>, and roll them out across your <span class="hl hl-c">organization</span>. Bring any model or framework, security stays underneath.</p>
-    </div>
-    <div class="ncards ncards-3">
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-skills"/></svg></span><span class="ncard-n">01</span></div><h3><span class="hl hl-a">Skill management</span></h3><p>Package capabilities as reusable skills. Versioned, testable, and shared across every agent your team runs.</p><div class="ph ncard-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 16:9</span></div></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-teams"/></svg></span><span class="ncard-n">02</span></div><h3><span class="hl hl-c">Organizational support</span></h3><p>Roles, teams, and shared context so every function can put agents to work, not just the platform team.</p><div class="ph ncard-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 16:9</span></div></article>
-      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><span class="ncard-n">03</span></div><h3><span class="hl hl-b">Workflow support</span></h3><p>Chain skills into workflows. Trigger on a schedule, an event, or a request. Hand off cleanly between agents.</p><div class="ph ncard-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 16:9</span></div></article>
-    </div>
-  </div>
-</section>
-
 <!-- ══════════════════ BUILD · RUN · GOVERN (scroll stepper) ══════════════════ -->
 <section class="stepper" id="brg">
   <div class="stepper-sticky">
@@ -220,13 +205,32 @@
   </div>
 </section>
 
+<!-- ══════════════════ SEE IT IN ACTION (video carousel) ══════════════════ -->
+<section class="videos" id="demos">
+  <div class="wrap">
+    <div class="vid-head">
+      <h2 class="section-h2 vid-title">See AgentZ in Action <span class="vid-title-sub">Real workflows from teams</span></h2>
+      <div class="vid-nav">
+        <button class="vid-arrow" data-dir="-1" aria-label="Previous"><svg class="ico"><use href="#i-chev"/></svg></button>
+        <button class="vid-arrow" data-dir="1" aria-label="Next"><svg class="ico"><use href="#i-chev"/></svg></button>
+      </div>
+    </div>
+    <div class="vid-track" id="vid-track">
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-mcp-connect.mp4" poster="assets/video/card-mcp-connect.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Connecting an MCP server in AgentZ"></video></div><b>Connect an MCP server</b><p>Pick a provider, authorize, watch it go Ready.</p></a>
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-schedule-cron.mp4" poster="assets/video/card-schedule-cron.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Editing a cron schedule in AgentZ"></video></div><b>Schedule an agent</b><p>Set a cron, edit the schedule in place, no redeploy.</p></a>
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-signed-trace.mp4" poster="assets/video/card-signed-trace.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Reading a signed trace in AgentZ: span tree, per-call durations and token counts"></video></div><b>Read a signed trace</b><p>Inspect every span, down to the token.</p></a>
+      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Guard a response</b><p>Run over real tools with policy at the edge.</p></a>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ PRODUCT SCREENS (carousel) ══════════════════ -->
 <section class="screens" id="screens">
   <div class="wrap">
     <div class="vid-head">
       <div>
         <p class="section-eyebrow">Inside the product</p>
-        <h2 class="section-h2">A look at AgentZ.</h2>
+        <h2 class="section-h2">The real dashboard, screen by screen.</h2>
       </div>
       <div class="vid-nav">
         <button class="vid-arrow" data-dir="-1" aria-label="Previous"><svg class="ico"><use href="#i-chev"/></svg></button>
@@ -239,39 +243,6 @@
       <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/span-error.png" alt="Span detail with token breakdown"></span><figcaption><b>Signed traces</b><span>Read every span, down to the token.</span></figcaption></figure>
       <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/network.png" alt="Network egress allowed or blocked at the kernel"></span><figcaption><b>Policy edge</b><span>Every egress allowed or blocked at the kernel.</span></figcaption></figure>
       <figure class="screen-card"><span class="screen-shot"><img src="assets/img/dash/environment.png" alt="A signed environment"></span><figcaption><b>Environments</b><span>Identity, packages and tools in one signed object.</span></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ SECURE BY DEFAULT (centered header + ghost-number cards) ══════════════════ -->
-<section class="feature alt" id="secure">
-  <div class="wrap">
-    <div class="fhead center">
-      <h2 class="fhead-h">Secure by default, so you never have to <span class="hl hl-a">bolt it on later</span>.</h2>
-      <p class="fhead-p">You focus on <span class="hl hl-a">skills</span> and <span class="hl hl-b">workflows</span>. AgentZ quietly handles the four things that usually turn an agent demo into a production incident.</p>
-    </div>
-    <div class="dcards">
-      <article class="dcard"><span class="dcard-num">01</span><span class="dcard-ico"><svg class="ico"><use href="#i-key"/></svg></span><h3>Credentials, handled</h3><p>Secrets stay in the vault. Agents get scoped access at the moment they need it, and never see the key.</p></article>
-      <article class="dcard"><span class="dcard-num">02</span><span class="dcard-ico"><svg class="ico"><use href="#i-shield"/></svg></span><h3>Just-enough access</h3><p>Every skill runs with the narrowest permissions that get the job done. No standing cloud roles.</p></article>
-      <article class="dcard"><span class="dcard-num">03</span><span class="dcard-ico"><svg class="ico"><use href="#i-eye"/></svg></span><h3>Runtime you can see</h3><p>Every action, tool call, and decision is visible in one place, in real time.</p></article>
-      <article class="dcard"><span class="dcard-num">04</span><span class="dcard-ico"><svg class="ico"><use href="#i-audit"/></svg></span><h3>Audit, out of the box</h3><p>A signed trace for every run. SOC and compliance reviews stop being a project.</p></article>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════════ SIX DOMAINS (split header + hairline grid) ══════════════════ -->
-<section class="feature" id="domains">
-  <div class="wrap">
-    <div class="fhead">
-      <h2 class="fhead-h">Point an agent at the <span class="hl hl-b">work you already do</span>.</h2>
-    </div>
-    <div class="dmn-grid">
-      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-server"/></svg></span><h3>IT and DevOps</h3></div><p>Triage alerts, run remediations, and automate routine ops on a schedule.</p></div>
-      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-secops"/></svg></span><h3>Security operations</h3></div><p>Enrich incidents and run guarded response workflows over real tools.</p></div>
-      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-chart"/></svg></span><h3>Data and reporting</h3></div><p>Pull, summarize, and distribute recurring reports across systems.</p></div>
-      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-headset"/></svg></span><h3>Customer ops</h3></div><p>Resolve tickets and update records with auditable, scoped access.</p></div>
-      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-receipt"/></svg></span><h3>Back office</h3></div><p>Automate finance, HR, and procurement tasks under tight controls.</p></div>
-      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><h3>Custom workflows</h3></div><p>Compose your own agents from marketplace building blocks.</p></div>
     </div>
   </div>
 </section>
@@ -339,6 +310,54 @@
   </div>
 </section>
 
+<!-- ══════════════════ SECURE BY DEFAULT (centered header + ghost-number cards) ══════════════════ -->
+<section class="feature alt" id="secure">
+  <div class="wrap">
+    <div class="fhead center">
+      <h2 class="fhead-h">Secure by default, so you never have to <span class="hl hl-a">bolt it on later</span>.</h2>
+      <p class="fhead-p">You focus on <span class="hl hl-a">skills</span> and <span class="hl hl-b">workflows</span>. AgentZ quietly handles the four things that usually turn an agent demo into a production incident.</p>
+    </div>
+    <div class="dcards">
+      <article class="dcard"><span class="dcard-num">01</span><span class="dcard-ico"><svg class="ico"><use href="#i-key"/></svg></span><h3>Credentials, handled</h3><p>Secrets stay in the vault. Agents get scoped access at the moment they need it, and never see the key.</p></article>
+      <article class="dcard"><span class="dcard-num">02</span><span class="dcard-ico"><svg class="ico"><use href="#i-shield"/></svg></span><h3>Just-enough access</h3><p>Every skill runs with the narrowest permissions that get the job done. No standing cloud roles.</p></article>
+      <article class="dcard"><span class="dcard-num">03</span><span class="dcard-ico"><svg class="ico"><use href="#i-eye"/></svg></span><h3>Runtime you can see</h3><p>Every action, tool call, and decision is visible in one place, in real time.</p></article>
+      <article class="dcard"><span class="dcard-num">04</span><span class="dcard-ico"><svg class="ico"><use href="#i-audit"/></svg></span><h3>Audit, out of the box</h3><p>A signed trace for every run. SOC and compliance reviews stop being a project.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ SIX DOMAINS (split header + hairline grid) ══════════════════ -->
+<section class="feature" id="domains">
+  <div class="wrap">
+    <div class="fhead">
+      <h2 class="fhead-h">Point an agent at the <span class="hl hl-b">work you already do</span>.</h2>
+    </div>
+    <div class="dmn-grid">
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-server"/></svg></span><h3>IT and DevOps</h3></div><p>Triage alerts, run remediations, and automate routine ops on a schedule.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-secops"/></svg></span><h3>Security operations</h3></div><p>Enrich incidents and run guarded response workflows over real tools.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-chart"/></svg></span><h3>Data and reporting</h3></div><p>Pull, summarize, and distribute recurring reports across systems.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-headset"/></svg></span><h3>Customer ops</h3></div><p>Resolve tickets and update records with auditable, scoped access.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-receipt"/></svg></span><h3>Back office</h3></div><p>Automate finance, HR, and procurement tasks under tight controls.</p></div>
+      <div class="dmn"><div class="dmn-head"><span class="dmn-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><h3>Custom workflows</h3></div><p>Compose your own agents from marketplace building blocks.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ THREE PILLARS (left header + cards) ══════════════════ -->
+<section class="feature" id="pillars">
+  <div class="wrap">
+    <div class="fhead">
+      <h2 class="fhead-h">A platform for the agents <span class="hl hl-a">your teams already want to build</span>.</h2>
+      <p class="fhead-p">Compose <span class="hl hl-a">skills</span>, wire them into <span class="hl hl-b">workflows</span>, and roll them out across your <span class="hl hl-c">organization</span>. Bring any model or framework, security stays underneath.</p>
+    </div>
+    <div class="ncards ncards-3">
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-skills"/></svg></span><span class="ncard-n">01</span></div><h3><span class="hl hl-a">Skill management</span></h3><p>Package capabilities as reusable skills. Versioned, testable, and shared across every agent your team runs.</p><div class="ph ncard-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 16:9</span></div></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-teams"/></svg></span><span class="ncard-n">02</span></div><h3><span class="hl hl-c">Organizational support</span></h3><p>Roles, teams, and shared context so every function can put agents to work, not just the platform team.</p><div class="ph ncard-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 16:9</span></div></article>
+      <article class="ncard"><div class="ncard-top"><span class="ncard-ico"><svg class="ico"><use href="#i-workflows"/></svg></span><span class="ncard-n">03</span></div><h3><span class="hl hl-b">Workflow support</span></h3><p>Chain skills into workflows. Trigger on a schedule, an event, or a request. Hand off cleanly between agents.</p><div class="ph ncard-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Image · 16:9</span></div></article>
+    </div>
+  </div>
+</section>
+
 <!-- ══════════════════ CONTROL (split copy + gradient card) ══════════════════ -->
 <section class="control" id="control">
   <div class="wrap control-grid">
@@ -386,25 +405,6 @@
       <span class="sh-line ital">Protected by Zero Trust.</span>
     </p>
     <p class="statement-sub">One tool for your organizational AI needs.</p>
-  </div>
-</section>
-
-<!-- ══════════════════ SEE IT IN ACTION (video carousel) ══════════════════ -->
-<section class="videos" id="demos">
-  <div class="wrap">
-    <div class="vid-head">
-      <h2 class="section-h2 vid-title">See AgentZ in Action <span class="vid-title-sub">Real workflows from teams</span></h2>
-      <div class="vid-nav">
-        <button class="vid-arrow" data-dir="-1" aria-label="Previous"><svg class="ico"><use href="#i-chev"/></svg></button>
-        <button class="vid-arrow" data-dir="1" aria-label="Next"><svg class="ico"><use href="#i-chev"/></svg></button>
-      </div>
-    </div>
-    <div class="vid-track" id="vid-track">
-      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-mcp-connect.mp4" poster="assets/video/card-mcp-connect.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Connecting an MCP server in AgentZ"></video></div><b>Connect an MCP server</b><p>Pick a provider, authorize, watch it go Ready.</p></a>
-      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-schedule-cron.mp4" poster="assets/video/card-schedule-cron.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Editing a cron schedule in AgentZ"></video></div><b>Schedule an agent</b><p>Set a cron, edit the schedule in place, no redeploy.</p></a>
-      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-signed-trace.mp4" poster="assets/video/card-signed-trace.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Reading a signed trace in AgentZ: span tree, per-call durations and token counts"></video></div><b>Read a signed trace</b><p>Inspect every span, down to the token.</p></a>
-      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Guard a response</b><p>Run over real tools with policy at the edge.</p></a>
-    </div>
   </div>
 </section>
 
@@ -528,6 +528,6 @@
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=51"></script>
+<script src="script.js?v=52"></script>
 </body>
 </html>
