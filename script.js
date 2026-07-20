@@ -2,7 +2,6 @@
    AgentZ — landing interactions
    ══════════════════════════════════════════════ */
 const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
 /* ── reveal on scroll ── */
 const io = new IntersectionObserver((entries) => {
@@ -14,7 +13,7 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.12 });
-document.querySelectorAll('.ph-hero,.arch-frame,.arch-rail,.flow,.ncard,.dcard,.dmn,.org-canvas,.control-copy,.control-card,.video-card,.screen-card,.integ-logos,.runtime-copy,.runtime-media')
+document.querySelectorAll('.ph-hero,.vw-hero,.arch-frame,.arch-rail,.flow,.ncard,.dcard,.dmn,.org-canvas,.control-copy,.control-card,.video-card,.screen-card,.integ-logos,.runtime-copy,.runtime-media')
   .forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
@@ -22,35 +21,123 @@ document.querySelectorAll('.ph-hero,.arch-frame,.arch-rail,.flow,.ncard,.dcard,.
     io.observe(el);
   });
 
-/* ── Build · Run · Govern scroll stepper ── */
-const stepper = document.querySelector('.stepper');
+/* ── product clips: silent loops, only while on screen ── */
+const play = (v) => { const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+
+const clips = [...document.querySelectorAll('.vw video')];
+clips.forEach((v) => { v.muted = true; });
+if (clips.length && !reduce) {
+  const vio = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) play(en.target);
+      else if (!en.target.paused) en.target.pause();
+    });
+  }, { threshold: 0.25 });
+  clips.forEach((v) => vio.observe(v));
+}
+
+/* ── Build · Run · Govern: stacked steps, each revealing as it scrolls in ── */
+const stepsRoot = document.querySelector('.steps');
 const steps = [...document.querySelectorAll('.step')];
-const dots = [...document.querySelectorAll('.step-dot')];
-let curStep = -1;
-
-function setStep(i) {
-  if (i === curStep) return;
-  curStep = i;
-  steps.forEach((s) => s.classList.toggle('is-on', +s.dataset.step === i));
-  dots.forEach((d) => d.classList.toggle('is-on', +d.dataset.go === i));
+if (stepsRoot && steps.length && !reduce) {
+  stepsRoot.classList.add('js-reveal');
+  const sio = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('is-on');
+      sio.unobserve(en.target);
+    });
+  }, { threshold: 0.2, rootMargin: '0px 0px -8% 0px' });
+  steps.forEach((s) => sio.observe(s));
+} else {
+  steps.forEach((s) => s.classList.add('is-on'));
 }
 
-function stepperProgress() {
-  if (!stepper || reduce) return;
-  const total = stepper.offsetHeight - window.innerHeight;
-  if (total <= 0) { setStep(0); return; }
-  const top = stepper.getBoundingClientRect().top;
-  const p = clamp(-top / total, 0, 1);
-  setStep(clamp(Math.floor(p * 3), 0, 2));
-}
+/* ── lightbox: click any product image or clip to open it full screen ── */
+(() => {
+  const targets = [...document.querySelectorAll('.vw, .screen-shot, .flow-frame, .integ-logos')]
+    .filter((el) => el.querySelector('img, video'));
+  if (!targets.length) return;
 
-dots.forEach((d) => d.addEventListener('click', () => {
-  if (!stepper) return;
-  const i = +d.dataset.go;
-  const total = stepper.offsetHeight - window.innerHeight;
-  const absTop = stepper.getBoundingClientRect().top + window.scrollY;
-  window.scrollTo({ top: absTop + total * ((i + 0.5) / 3), behavior: reduce ? 'auto' : 'smooth' });
-}));
+  const lb = document.createElement('div');
+  lb.className = 'lb';
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.setAttribute('aria-label', 'Expanded view');
+  lb.innerHTML =
+    '<button class="lb-close" type="button" aria-label="Close">' +
+    '<svg class="ico"><use href="#i-close"/></svg></button>' +
+    '<div class="lb-stage"></div><p class="lb-cap"></p>';
+  document.body.appendChild(lb);
+
+  const stage = lb.querySelector('.lb-stage');
+  const cap = lb.querySelector('.lb-cap');
+  const closeBtn = lb.querySelector('.lb-close');
+  let lastFocus = null;
+
+  function close() {
+    if (!lb.classList.contains('is-open')) return;
+    lb.classList.remove('is-open');
+    document.body.classList.remove('lb-lock');
+    stage.innerHTML = '';
+    if (lastFocus) lastFocus.focus();
+  }
+
+  function open(el) {
+    const src = el.querySelector('img, video');
+    if (!src) return;
+    lastFocus = el;
+    stage.innerHTML = '';
+
+    const node = src.cloneNode(true);
+    if (node.tagName === 'VIDEO') {
+      node.muted = true;
+      node.loop = true;
+      node.controls = true;
+      node.setAttribute('playsinline', '');
+      node.removeAttribute('poster');
+      node.currentTime = src.currentTime || 0;
+      stage.appendChild(node);
+      if (!reduce) play(node);
+    } else {
+      node.removeAttribute('width');
+      node.removeAttribute('height');
+      stage.appendChild(node);
+    }
+
+    cap.textContent = src.getAttribute('aria-label') || src.getAttribute('alt') || '';
+    lb.classList.add('is-open');
+    document.body.classList.add('lb-lock');
+    closeBtn.focus();
+  }
+
+  targets.forEach((el) => {
+    el.classList.add('zoomable');
+    el.setAttribute('tabindex', '0');
+    el.setAttribute('role', 'button');
+    const media = el.querySelector('img, video');
+    const what = media && media.tagName === 'VIDEO' ? 'clip' : 'image';
+    el.setAttribute('aria-label', 'Open this ' + what + ' full screen');
+
+    const cue = document.createElement('span');
+    cue.className = 'zoom-cue';
+    cue.innerHTML = '<svg class="ico"><use href="#i-expand"/></svg>';
+    el.appendChild(cue);
+
+    el.addEventListener('click', (e) => {
+      e.preventDefault();   /* demo cards wrap the clip in a link */
+      e.stopPropagation();
+      open(el);
+    });
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(el); }
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+})();
 
 /* ── top scroll-progress bar ── */
 const bar = document.getElementById('scrollbar-fill');
@@ -65,14 +152,12 @@ function onScroll() {
   if (ticking) return;
   ticking = true;
   requestAnimationFrame(() => {
-    stepperProgress();
     progress();
     ticking = false;
   });
 }
 window.addEventListener('scroll', onScroll, { passive: true });
 window.addEventListener('resize', onScroll);
-stepperProgress();
 progress();
 
 /* ── carousels (video + product screens): prev / next ── */

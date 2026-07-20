@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=38" />
+<link rel="stylesheet" href="styles.css?v=42" />
 </head>
 <body>
 
@@ -48,6 +48,8 @@
     <symbol id="i-codex" viewBox="0 0 24 24"><path d="M8.5 7L4 12l4.5 5M15.5 7L20 12l-4.5 5M13.5 5l-3 14"/></symbol>
     <symbol id="i-antigravity" viewBox="0 0 24 24"><path d="M12 3l8.5 15h-17z"/><path d="M12 3v15M6 15l6-4 6 4"/></symbol>
     <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2.2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5M15 4h5v5M15 20h5v-5M9 20H4v-5"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
     <symbol id="i-fingerprint" viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 13.5-2.5M19 13v2M8.5 12a3.5 3.5 0 0 1 7 0v4.5M12 12v6M5.5 15.5V18M15.5 12v5.5"/></symbol>
   </defs>
 </svg>
@@ -98,7 +100,11 @@
 <!-- ══════════════════ SHOWCASE (big placeholder) ══════════════════ -->
 <section class="showcase">
   <div class="wrap">
-    <div class="ph ph-hero"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Product screenshot · 1600 × 900</span></div>
+    <div class="vw vw-hero">
+      <video src="assets/video/hero-workflow-graph.mp4" poster="assets/video/hero-workflow-graph.jpg"
+             muted loop playsinline preload="metadata"
+             aria-label="A workflow running live in AgentZ, steps moving through running and succeeded"></video>
+    </div>
   </div>
 </section>
 
@@ -174,7 +180,11 @@
             <h2>Build</h2>
             <p>Describe the job in a sentence. AgentZ writes the skill and wires every step.</p>
           </div>
-          <div class="step-media"><div class="ph ph-dark step-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Build screenshot · 16:9</span></div></div>
+          <div class="step-media"><div class="vw vw-dark vw-step">
+            <video src="assets/video/build-create-agent.mp4" poster="assets/video/build-create-agent.jpg"
+                   muted loop playsinline preload="none"
+                   aria-label="Creating an agent in AgentZ: sandbox, skills, persistent memory and model provider"></video>
+          </div></div>
         </article>
         <article class="step" data-step="1">
           <div class="step-copy">
@@ -182,7 +192,11 @@
             <h2>Run</h2>
             <p>Chat, API, CLI, or a schedule. Any framework, any model, no redeploy.</p>
           </div>
-          <div class="step-media"><div class="ph ph-dark step-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Run screenshot · 16:9</span></div></div>
+          <div class="step-media"><div class="vw vw-dark vw-step">
+            <video src="assets/video/run-chat-workflows.mp4" poster="assets/video/run-chat-workflows.jpg"
+                   muted loop playsinline preload="none"
+                   aria-label="Running workflows from chat in AgentZ, with the file explorer and run history open"></video>
+          </div></div>
         </article>
         <article class="step" data-step="2">
           <div class="step-copy">
@@ -190,7 +204,11 @@
             <h2>Govern</h2>
             <p>Resolved at the edge, checked at the kernel, stamped to a signed trace.</p>
           </div>
-          <div class="step-media"><div class="ph ph-dark step-ph"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Govern screenshot · 16:9</span></div></div>
+          <div class="step-media"><div class="vw vw-dark vw-step">
+            <video src="assets/video/govern-sandbox-permissions.mp4" poster="assets/video/govern-sandbox-permissions.jpg"
+                   muted loop playsinline preload="none"
+                   aria-label="Scoping a sandbox in AgentZ down to per-tool permissions and allowed hosts"></video>
+          </div></div>
         </article>
       </div>
       <div class="step-dots">
@@ -396,8 +414,8 @@
       </div>
     </div>
     <div class="vid-track" id="vid-track">
-      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Build a skill in chat</b><p>From one sentence to a wired, testable skill.</p></a>
-      <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Schedule an agent</b><p>Set a cron, edit from chat, no redeploy.</p></a>
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-mcp-connect.mp4" poster="assets/video/card-mcp-connect.jpg" muted loop playsinline preload="none" aria-label="Connecting an MCP server in AgentZ"></video></div><b>Connect an MCP server</b><p>Pick a provider, authorize, watch it go Ready.</p></a>
+      <a class="video-card" href="#waitlist"><div class="vw vw-thumb"><video src="assets/video/card-schedule-cron.mp4" poster="assets/video/card-schedule-cron.jpg" muted loop playsinline preload="none" aria-label="Editing a cron schedule in AgentZ"></video></div><b>Schedule an agent</b><p>Set a cron, edit the schedule in place, no redeploy.</p></a>
       <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Read a signed trace</b><p>Inspect every span, down to the token.</p></a>
       <a class="video-card" href="#waitlist"><div class="ph video-thumb"><span class="ph-play"><svg class="ico"><use href="#i-play"/></svg></span><span class="ph-label">Embed demo video</span></div><b>Guard a response</b><p>Run over real tools with policy at the edge.</p></a>
     </div>
@@ -414,7 +432,11 @@
       <a class="link-arrow" href="https://accuknox.com/demo" target="_blank" rel="noopener">See the platform <svg class="ico ico-sm"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="runtime-media">
-      <div class="ph ph-wide"><span class="ph-ico"><svg class="ico"><use href="#i-image"/></svg></span><span class="ph-label">Runtime telemetry screenshot · 1600 × 1000</span></div>
+      <div class="vw vw-wide">
+        <video src="assets/video/runtime-traces-telemetry.mp4" poster="assets/video/runtime-traces-telemetry.jpg"
+               muted loop playsinline preload="none"
+               aria-label="Reading a signed trace in AgentZ: span tree, durations, token counts and network events"></video>
+      </div>
     </div>
   </div>
 </section>
@@ -506,6 +528,6 @@
 </main>
 
 <script async src="https://tally.so/widgets/embed.js"></script>
-<script src="script.js?v=38"></script>
+<script src="script.js?v=42"></script>
 </body>
 </html>
