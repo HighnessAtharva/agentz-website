@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>AgentZ logo preview</title>
+<link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--navy:#000025;--blue:#2f4bd6;--blue-bright:#4f6bff;--paper:#f7f8fb;--line:#e2e6ef;--ink:#0b0b28;--mute:#7a7f92}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'General Sans',system-ui,sans-serif;background:var(--paper);color:var(--ink)}
+  .wrap{max-width:1040px;margin:0 auto;padding:40px 28px 80px}
+  h1{font-size:28px;letter-spacing:-.02em;margin:0 0 4px}
+  .sub{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.06em;color:var(--mute);text-transform:uppercase;margin:0 0 32px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
+  .card{border:1px solid var(--line);border-radius:18px;padding:34px;display:flex;flex-direction:column;gap:26px;align-items:flex-start;background:#fff}
+  .card.dark{background:var(--navy);border-color:#1b1b44}
+  .tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+  .card.dark .tag{color:#8a8fb5}
+  .row{display:flex;align-items:center;gap:34px;flex-wrap:wrap}
+  /* wordmark rendered as live HTML so brand fonts apply everywhere */
+  .wm{font-weight:700;letter-spacing:-.045em;font-size:44px;color:var(--navy);line-height:1}
+  .wm .z{color:var(--blue)}
+  .wm.on-dark{color:#fff}
+  .wm.on-dark .z{color:var(--blue-bright)}
+  .wm.serif .z{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+  .mk{display:grid;place-items:center;border-radius:16px;background:var(--navy)}
+  .mk svg{display:block}
+  .lockup{display:flex;align-items:center;gap:16px}
+  .sizes{display:flex;align-items:flex-end;gap:22px}
+  .favi{display:flex;align-items:center;gap:14px}
+  .favi .chip{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:13px;color:var(--ink)}
+  .card.dark .chip{background:#0d0d33;border-color:#23234f;color:#e7e9f5}
+  .note{font-size:13px;color:var(--mute);max-width:52ch;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AgentZ logo</h1>
+  <p class="sub">Two directions · navy #000025 · electric blue #2f4bd6</p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="tag">A · Geometric (recommended, Linear/Notion feel)</span>
+      <div class="lockup">
+        <span class="mk" style="width:64px;height:64px">
+          <svg viewBox="0 0 64 64" width="52" height="52"><path d="M19 20 H45 L19 44 H45" fill="none" stroke="#fff" stroke-width="7"/><path d="M45 20 L19 44" fill="none" stroke="#2f4bd6" stroke-width="7"/></svg>
+        </span>
+        <span class="wm">Agent<span class="z">Z</span></span>
+      </div>
+      <div class="sizes">
+        <span class="mk" style="width:64px;height:64px"><svg viewBox="0 0 64 64" width="52" height="52"><path d="M19 20 H45 L19 44 H45" fill="none" stroke="#fff" stroke-width="7"/><path d="M45 20 L19 44" fill="none" stroke="#2f4bd6" stroke-width="7"/></svg></span>
+        <span class="mk" style="width:40px;height:40px;border-radius:11px"><svg viewBox="0 0 64 64" width="32" height="32"><path d="M19 20 H45 L19 44 H45" fill="none" stroke="#fff" stroke-width="7"/><path d="M45 20 L19 44" fill="none" stroke="#2f4bd6" stroke-width="7"/></svg></span>
+        <span class="mk" style="width:24px;height:24px;border-radius:7px"><svg viewBox="0 0 64 64" width="19" height="19"><path d="M19 20 H45 L19 44 H45" fill="none" stroke="#fff" stroke-width="8"/><path d="M45 20 L19 44" fill="none" stroke="#2f4bd6" stroke-width="8"/></svg></span>
+      </div>
+    </div>
+
+    <div class="card dark">
+      <span class="tag">A · on navy</span>
+      <div class="lockup">
+        <span class="mk" style="width:64px;height:64px;box-shadow:0 0 0 1px #26265a"><svg viewBox="0 0 64 64" width="52" height="52"><path d="M19 20 H45 L19 44 H45" fill="none" stroke="#fff" stroke-width="7"/><path d="M45 20 L19 44" fill="none" stroke="#4f6bff" stroke-width="7"/></svg></span>
+        <span class="wm on-dark">Agent<span class="z">Z</span></span>
+      </div>
+      <p class="note" style="color:#8a8fb5">On dark zones the diagonal shifts to the brighter blue (#4f6bff) and the tile gets a 1px hairline so it does not vanish.</p>
+    </div>
+
+    <div class="card">
+      <span class="tag">B · Editorial (matches favicon + Instrument Serif)</span>
+      <div class="lockup">
+        <span class="mk" style="width:64px;height:64px"><svg viewBox="0 0 64 64" width="52" height="52"><text x="33" y="47" text-anchor="middle" font-family="'Instrument Serif',Georgia,serif" font-style="italic" font-size="46" fill="#fff">Z</text><rect x="20" y="52" width="24" height="3" rx="1.5" fill="#2f4bd6"/></svg></span>
+        <span class="wm serif">Agent<span class="z">Z</span></span>
+      </div>
+      <div class="sizes">
+        <span class="mk" style="width:64px;height:64px"><svg viewBox="0 0 64 64" width="52" height="52"><text x="33" y="47" text-anchor="middle" font-family="'Instrument Serif',Georgia,serif" font-style="italic" font-size="46" fill="#fff">Z</text><rect x="20" y="52" width="24" height="3" rx="1.5" fill="#2f4bd6"/></svg></span>
+        <span class="mk" style="width:40px;height:40px;border-radius:11px"><svg viewBox="0 0 64 64" width="32" height="32"><text x="33" y="47" text-anchor="middle" font-family="'Instrument Serif',Georgia,serif" font-style="italic" font-size="46" fill="#fff">Z</text></svg></span>
+        <span class="mk" style="width:24px;height:24px;border-radius:7px"><svg viewBox="0 0 64 64" width="19" height="19"><text x="33" y="48" text-anchor="middle" font-family="'Instrument Serif',Georgia,serif" font-style="italic" font-size="50" fill="#fff">Z</text></svg></span>
+      </div>
+    </div>
+
+    <div class="card dark">
+      <span class="tag">B · on navy</span>
+      <div class="lockup">
+        <span class="mk" style="width:64px;height:64px;box-shadow:0 0 0 1px #26265a"><svg viewBox="0 0 64 64" width="52" height="52"><text x="33" y="47" text-anchor="middle" font-family="'Instrument Serif',Georgia,serif" font-style="italic" font-size="46" fill="#fff">Z</text><rect x="20" y="52" width="24" height="3" rx="1.5" fill="#4f6bff"/></svg></span>
+        <span class="wm serif on-dark">Agent<span class="z">Z</span></span>
+      </div>
+      <p class="note" style="color:#8a8fb5">The italic Z is the existing favicon, grown into a full lockup with a blue underscore accent.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

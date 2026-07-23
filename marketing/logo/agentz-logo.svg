@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 246 72" width="246" height="72" role="img" aria-label="AgentZ">
+  <g transform="translate(0,4)">
+    <rect width="64" height="64" rx="16" fill="#000025"/>
+    <path d="M19 20 H45 L19 44 H45" fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="miter" stroke-linecap="butt"/>
+    <path d="M45 20 L19 44" fill="none" stroke="#2f4bd6" stroke-width="7" stroke-linecap="butt"/>
+  </g>
+  <text x="82" y="49" font-family="'General Sans','Inter',system-ui,-apple-system,sans-serif" font-size="41" font-weight="700" letter-spacing="-1.7" fill="#000025">Agent<tspan fill="#2f4bd6">Z</tspan></text>
+</svg>

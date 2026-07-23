@@ -432,6 +432,10 @@ body.lb-lock{overflow:hidden}
 .ncard-ph{margin-top:22px;aspect-ratio:16/9;min-height:0;border-radius:12px}
 .ncard-ph .ph-ico .ico{width:22px;height:22px}
 .ncard-ph .ph-label{font-size:11.5px}
+/* on-brand card illustrations (replace 16:9 placeholders) */
+.ncard-art{margin-top:22px;aspect-ratio:16/9;border-radius:12px;overflow:hidden;
+  border:1px solid var(--line);background:linear-gradient(160deg,#f1f5ff 0%,#ffffff 62%)}
+.ncard-art svg{display:block;width:100%;height:100%}
 /* big integrations overview placeholder */
 .integ-shot{margin-top:56px}
 
