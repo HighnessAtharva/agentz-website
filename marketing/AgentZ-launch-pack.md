@@ -1,9 +1,10 @@
 # AgentZ Launch Marketing Pack
 
-Everything here is written to post as-is. Fill the two placeholders once and you are ready:
+Everything here is written to post as-is. Links and names are already filled in:
 
-- `{LANDING_URL}` = the public AgentZ landing page (the one with the "Join the waitlist" button).
-- `{name}` = whoever is posting.
+- Landing page / waitlist: `https://accuknox.com/platform/agentz`
+- Posting owner: LinkedIn posts go out from **Likhita**. Email, Slack, and Reddit go out from **Kavitha**.
+- `{first_name}` in the emails is a recipient merge field. Fill it from your list.
 
 Known links you can use directly:
 - Product walkthrough / demo: `https://accuknox.com/demo`
@@ -84,7 +85,7 @@ Note on format: for LinkedIn, trim clips to 12 to 20 seconds, add a one-line cap
 
 ## 4. LinkedIn posts (5 angles)
 
-Each is a standalone announcement. None is a countdown. Post them roughly a week apart, in this order.
+Each is a standalone announcement. None is a countdown. Post them roughly a week apart, in this order. Publish from **Likhita's** LinkedIn profile.
 
 ---
 
@@ -103,7 +104,7 @@ It is not another agent framework. Frameworks help you write an agent. AgentZ ru
 
 Built by AccuKnox. Live in August.
 
-If your team has agents stuck at the demo stage, this is for you. Join the waitlist: {LANDING_URL}
+If your team has agents stuck at the demo stage, this is for you. Join the waitlist: https://accuknox.com/platform/agentz
 
 `#AgentZ #AIagents #AgenticAI #ZeroTrust #AccuKnox`
 
@@ -124,7 +125,7 @@ Zero Trust, applied to agents. Trust none by default.
 
 This is what AccuKnox has done for cloud and Kubernetes runtime for years. Now it is for your agents.
 
-AgentZ launches in August. Waitlist is open: {LANDING_URL}
+AgentZ launches in August. Waitlist is open: https://accuknox.com/platform/agentz
 
 `#ZeroTrust #AISecurity #AgenticAI #AgentZ #CISO`
 
@@ -143,7 +144,7 @@ No migration. Bring the framework and model you already use. AgentZ handles the 
 
 That is the platform. Built by AccuKnox, live in August.
 
-Waitlist: {LANDING_URL}
+Waitlist: https://accuknox.com/platform/agentz
 
 `#AIagents #MCP #LLM #AgentZ #DevTools`
 
@@ -162,7 +163,7 @@ Nothing your agent does is a mystery. That is the difference between an agent de
 
 AgentZ, by AccuKnox. Live in August.
 
-See it: {LANDING_URL}
+See it: https://accuknox.com/platform/agentz
 
 `#Observability #AIagents #AgenticAI #AgentZ #Compliance`
 
@@ -185,7 +186,7 @@ Autonomy you can actually hand real access to. Govern every agent, trust none by
 
 AgentZ, by AccuKnox. Live in August.
 
-{LANDING_URL}
+https://accuknox.com/platform/agentz
 
 `#AgenticAI #AIagents #ZeroTrust #AgentZ #EngineeringLeadership`
 
@@ -203,7 +204,7 @@ Send about 5 to 7 days apart. Keep them plain-text-feeling even in HTML. One cle
 **Subject line B:** The missing layer for AI agents
 **Preview text:** A Zero Trust platform to build, run, and govern agents. From AccuKnox. Live in August.
 
-Hi {name},
+Hi {first_name},
 
 Your team can build an AI agent in an afternoon. Getting it to do real work is where it stalls.
 
@@ -215,10 +216,11 @@ AgentZ is a Zero Trust platform to build, run, and govern AI agents, secure by d
 
 We are opening early access as spots free up. If you want an early look, join the waitlist.
 
-[Join the waitlist]({LANDING_URL})
+[Join the waitlist](https://accuknox.com/platform/agentz)
 
 More soon,
-The AccuKnox team
+Kavitha
+AccuKnox
 
 ---
 
@@ -229,7 +231,7 @@ The AccuKnox team
 **Preview text:** One control plane for every agent, model, and team.
 **Suggested media:** embed `04_workflow-runs-chat-tour.mp4` or `01_create-agents-any-llm-sandbox-memory.mp4`
 
-Hi {name},
+Hi {first_name},
 
 Here is what AgentZ does.
 
@@ -246,9 +248,10 @@ Who it is for: platform, security, and ops teams that want agents doing real wor
 
 AgentZ launches in August. Get in early.
 
-[Join the waitlist]({LANDING_URL})
+[Join the waitlist](https://accuknox.com/platform/agentz)
 
-The AccuKnox team
+Kavitha
+AccuKnox
 
 ---
 
@@ -258,7 +261,7 @@ The AccuKnox team
 **Subject line B:** Your spot on the AgentZ waitlist
 **Preview text:** Early access, first look at the policy edge and signed traces.
 
-Hi {name},
+Hi {first_name},
 
 AgentZ is almost here. It launches in August, and we are letting waitlist teams in first.
 
@@ -269,11 +272,12 @@ Early access gets you:
 
 If you are trying to move agents from prototype to production, this is the fastest way to do it without leaving security as a later problem.
 
-[Join the waitlist]({LANDING_URL})
+[Join the waitlist](https://accuknox.com/platform/agentz)
 
 Want a walkthrough with your stack in the room? Reply to this email, or see the platform here: https://accuknox.com/demo
 
-The AccuKnox team
+Kavitha
+AccuKnox
 
 ---
 
@@ -283,29 +287,30 @@ Etiquette first, because it decides whether this lands or gets you muted:
 - Post in the right channel only (usually `#show-and-tell`, `#launches`, `#self-promotion`, or an intro channel). If unsure, ask a mod.
 - Lead with value, not the ask. Be a person, not a press release.
 - One message, no repeats across channels in the same community.
+- Post as: **Kavitha**.
 
 **Ultra-short (self-promo / launch channel)**
 
-> AgentZ (by AccuKnox) launches in August: build, run, and govern AI agents, secure by default. Any model, permissions scoped per tool call, a signed trace for every run. Waitlist is open if that is useful to your team → {LANDING_URL}
+> AgentZ (by AccuKnox) launches in August: build, run, and govern AI agents, secure by default. Any model, permissions scoped per tool call, a signed trace for every run. Waitlist is open if that is useful to your team → https://accuknox.com/platform/agentz
 
 **What / who (a touch more context)**
 
-> 👋 We are launching AgentZ next month. It is a Zero Trust platform for running AI agents in production: pick any model, scope tools per call, connect MCP servers out of the box, and get a signed trace of everything the agent did. Built for platform, security, and ops teams stuck getting agents past the demo stage. Early access: {LANDING_URL}
+> 👋 We are launching AgentZ next month. It is a Zero Trust platform for running AI agents in production: pick any model, scope tools per call, connect MCP servers out of the box, and get a signed trace of everything the agent did. Built for platform, security, and ops teams stuck getting agents past the demo stage. Early access: https://accuknox.com/platform/agentz
 
 **Intro-channel version**
 
-> Hi all 👋 I am {name} from AccuKnox. We are about to launch AgentZ, a platform for running AI agents in production with Zero Trust security: scoped tools, kernel-enforced egress, signed traces, any model. If your team is trying to get agents past the prototype stage, I would genuinely value your take. Waitlist: {LANDING_URL}
+> Hi all 👋 I am Kavitha from AccuKnox. We are about to launch AgentZ, a platform for running AI agents in production with Zero Trust security: scoped tools, kernel-enforced egress, signed traces, any model. If your team is trying to get agents past the prototype stage, I would genuinely value your take. Waitlist: https://accuknox.com/platform/agentz
 
 **Show-and-tell version (pair with a clip)**
 
-> Sharing something we have been building. AgentZ lets you spin up an agent on any model, give it only the tools it needs (per tool call, not per integration), run it from chat or a schedule, and then read a signed trace down to the token. Launches in August. Short clip below. Feedback welcome. {LANDING_URL}
+> Sharing something we have been building. AgentZ lets you spin up an agent on any model, give it only the tools it needs (per tool call, not per integration), run it from chat or a schedule, and then read a signed trace down to the token. Launches in August. Short clip below. Feedback welcome. https://accuknox.com/platform/agentz
 > _Attach: `06_live-workflow-graph.mp4` or `07_traces.mp4`_
 
 ---
 
 ## 7. Reddit post
 
-Reddit rewards honesty and punishes marketing. Post as yourself, disclose the AccuKnox affiliation, and ask for real feedback.
+Reddit rewards honesty and punishes marketing. Post as yourself, disclose the AccuKnox affiliation, and ask for real feedback. Posting as: **Kavitha**.
 
 **Suggested subreddits:** r/AI_Agents, r/mcp, r/LLMDevs, r/devops, r/kubernetes (AccuKnox / KubeArmor angle), r/LocalLLaMA (the "any model, bring your own" angle).
 
@@ -333,7 +338,7 @@ It is not a framework. Bring LangChain, CrewAI, or your own code. AgentZ is the 
 
 Who I think it is for: platform, security, and ops teams that want agents doing real work without opening a new hole.
 
-It is in preview, launching in August. Waitlist is here if you want early access: {LANDING_URL}
+It is in preview, launching in August. Waitlist is here if you want early access: https://accuknox.com/platform/agentz
 
 Genuinely interested in what would stop you from trusting an agent with production access, and whether this covers it. Happy to answer anything.
 
@@ -357,7 +362,7 @@ For `#general` or `#company-wide`. Goal: get the team sharing on launch.
 > 3. Tag it `#AgentZ` so we can find and amplify it.
 >
 > **Blurb to copy:**
-> AccuKnox is launching AgentZ: a Zero Trust platform to build, run, and govern AI agents in production. Any model, scoped access per tool call, a signed trace for every run. Live in August. Waitlist open → {LANDING_URL}
+> AccuKnox is launching AgentZ: a Zero Trust platform to build, run, and govern AI agents in production. Any model, scoped access per tool call, a signed trace for every run. Live in August. Waitlist open → https://accuknox.com/platform/agentz
 >
 > **Assets** (logo, clips, more copy): see `marketing/` in the agentz-website repo.
 > Questions, leads, or feedback: drop them in `#agentz-launch`.
