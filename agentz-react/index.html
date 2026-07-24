@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build, Run and Govern Production Agents with AgentZ Zero Trust Sandbox Platform</title>
+    <meta name="description" content="Build, Run and Govern zero trust autonomous AI agents in an isolated sandbox. AgentZ by AccuKnox is a secure sandbox allowing teams to use agent skills, MCPs, workflows for organizational adoption." />
+    <link rel="icon" type="image/svg+xml" href="./assets/img/favicon.svg" />
+    <script>
+      // set theme before paint to avoid a flash
+      (function () {
+        // AgentZ defaults to the onorca-style dark theme; light is opt-in.
+        try {
+          var q = new URLSearchParams(location.search).get('theme');
+          var stored = localStorage.getItem('agentz-theme');
+          var t = (q || stored || 'dark') === 'light' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script async src="https://tally.so/widgets/embed.js"></script>
+  </body>
+</html>
